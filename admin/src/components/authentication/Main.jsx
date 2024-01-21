@@ -1,6 +1,10 @@
+import Form from "./components/Form"
+
 const Main = () => {
   return (
-    <div> Authentication main </div>
+    <div className="authentication">
+        <Form />
+    </div>
   )
 }
 

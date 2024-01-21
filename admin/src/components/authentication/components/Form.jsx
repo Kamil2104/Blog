@@ -1,3 +1,5 @@
+import '../assets/Form.css'
+
 const Form = () => {
   return (
     <div className="form">

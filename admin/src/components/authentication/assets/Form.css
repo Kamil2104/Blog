@@ -36,7 +36,7 @@
 }
 
 .inputs input {
-    font-size: 1.5em;
+    font-size: 1.75em;
     color: var(--clr-gray);
 
     margin: 1em;
@@ -55,12 +55,12 @@
     margin-top: 2.5em;
     padding: .35em .75em;
 
-    font-size: 1.35em;
+    font-size: 1.5em;
 
     color: var(--clr-gray);
     background-color: transparent;
 
-    border: .125em solid var(--clr-gray);
+    border: .12em solid var(--clr-gray);
 }
 
 .button button:hover {

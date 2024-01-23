@@ -63,6 +63,11 @@
     color: var(--clr-dark-gray);
 }
 
+.eyeIcon {
+    font-size: 1.25em;
+    color: var(--clr-gray);
+}
+
 .button button {
     margin-top: 2.5em;
     padding: .35em .75em;

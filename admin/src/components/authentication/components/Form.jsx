@@ -1,8 +1,15 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../assets/Form.css'
+import { faLock } from '@fortawesome/free-solid-svg-icons'
 
 const Form = () => {
   return (
     <div className="form">
+        <header>
+            <FontAwesomeIcon 
+                icon={faLock}
+            />
+        </header>
         <div className="inputs">
             <input 
                 type="text"

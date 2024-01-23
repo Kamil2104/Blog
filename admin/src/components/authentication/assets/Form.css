@@ -4,6 +4,11 @@
     --clr-gray: rgb(145, 145, 145);
 }
 
+::selection {
+    color: var(--clr-light-black);
+    background-color: var(--clr-gray);
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -40,6 +45,7 @@
     color: var(--clr-gray);
 
     margin: 1em;
+    padding: 0em .15em;
 
     background-color: transparent;
 

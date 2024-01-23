@@ -37,6 +37,7 @@ const Form = () => {
             <FontAwesomeIcon
                 icon={showPassword ? faEyeSlash : faEye}
                 onClick={togglePasswordVisibility}
+                className='eyeIcon'
             />
         </div>
         <div className="button">

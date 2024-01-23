@@ -28,17 +28,19 @@ const Form = () => {
                 autoComplete="true"
                 placeholder="Username:"
             />
-            <input 
-                type={showPassword ? "text" : "password"}
-                spellCheck="false"
-                autoComplete="false"
-                placeholder="Password:" 
-            />
-            <FontAwesomeIcon
-                icon={showPassword ? faEyeSlash : faEye}
-                onClick={togglePasswordVisibility}
-                className='eyeIcon'
-            />
+            <div className="inputPassword">
+                <input 
+                    type={showPassword ? "text" : "password"}
+                    spellCheck="false"
+                    autoComplete="false"
+                    placeholder="Password:" 
+                />
+                <FontAwesomeIcon
+                    icon={showPassword ? faEyeSlash : faEye}
+                    onClick={togglePasswordVisibility}
+                    className='eyeIcon'
+                />
+            </div>
         </div>
         <div className="button">
             <button>

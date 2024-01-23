@@ -2,6 +2,7 @@
     --clr-black: rgb(22, 22, 22);
     --clr-light-black: rgb(16, 16, 16);
     --clr-gray: rgb(145, 145, 145);
+    --clr-dark-gray: rgb(97, 97, 97);
 }
 
 ::selection {
@@ -55,6 +56,11 @@
 
 .inputs input:focus {
     outline: none;
+}
+
+.inputs ::placeholder{
+    font-size: .9em;
+    color: var(--clr-dark-gray);
 }
 
 .button button {

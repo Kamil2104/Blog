@@ -1,8 +1,18 @@
+import { useState } from 'react'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import '../assets/Form.css'
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import { faLock } from '@fortawesome/free-solid-svg-icons'
 
+import '../assets/Form.css'
+
 const Form = () => {
+    const [showPassword, setShowPassword] = useState(false)
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(prev => !prev)
+    }
+
   return (
     <div className="form">
         <header>
@@ -19,10 +29,14 @@ const Form = () => {
                 placeholder="Username:"
             />
             <input 
-                type="password" 
+                type={showPassword ? "text" : "password"}
                 spellCheck="false"
                 autoComplete="false"
                 placeholder="Password:" 
+            />
+            <FontAwesomeIcon
+                icon={showPassword ? faEyeSlash : faEye}
+                onClick={togglePasswordVisibility}
             />
         </div>
         <div className="button">

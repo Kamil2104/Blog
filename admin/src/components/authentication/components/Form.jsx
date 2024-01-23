@@ -8,6 +8,7 @@ const Form = () => {
         <header>
             <FontAwesomeIcon 
                 icon={faLock}
+                className="lockIcon"
             />
         </header>
         <div className="inputs">

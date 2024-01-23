@@ -16,11 +16,13 @@ const Form = () => {
                 type="text"
                 spellCheck="false" 
                 autoComplete="true"
+                placeholder="Username:"
             />
             <input 
                 type="password" 
                 spellCheck="false"
-                autoComplete="false" 
+                autoComplete="false"
+                placeholder="Password:" 
             />
         </div>
         <div className="button">

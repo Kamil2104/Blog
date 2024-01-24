@@ -96,7 +96,12 @@
 @media (max-width: 550px) or (max-height: 650px) {
     .form {
         width: 175px;
-        height: 250px; 
+        height: 250px;
+        
+        box-shadow: 0em -.1em .5em var(--clr-light-black),
+            0em .1em .5em var(--clr-light-black),
+            .1em 0em .5em var(--clr-light-black),
+            -.1em 0em .5em var(--clr-light-black);
     }
     
     .lockIcon {

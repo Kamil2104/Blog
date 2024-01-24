@@ -63,9 +63,17 @@
     color: var(--clr-dark-gray);
 }
 
+.inputPassword input {
+    transform: translateX(0.4em);
+}
+
 .eyeIcon {
-    font-size: 1.25em;
+    font-size: 1.2em;
     color: var(--clr-gray);
+
+    margin-bottom: .1em;
+
+    transform: translateX(-2.25em);
 }
 
 .button button {

@@ -16,7 +16,8 @@
     justify-content: center;
     align-items: center;
 
-    padding: 5em 1.75em;
+    height: 600px;
+    width: 450px;
 
     background-color: var(--clr-black);
     border-radius: 2em;
@@ -90,4 +91,29 @@
 
 .button button:hover {
     cursor: pointer;
+}
+
+@media (max-width: 550px) or (max-height: 650px) {
+    .form {
+        width: 175px;
+        height: 250px; 
+    }
+    
+    .lockIcon {
+        margin-top: .75em;
+        font-size: 1.5em;
+    }
+
+    .inputs input{
+        font-size: .75em;
+    }
+
+    .eyeIcon {
+        font-size: .3em;
+    }
+
+    .button button{
+        font-size: .75em;
+        margin-bottom: 1em;
+    }
 }

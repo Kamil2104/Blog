@@ -28,6 +28,9 @@
 }
 
 .lockIcon {
+    width: 1.2em;
+    height: 1.2em;
+
     font-size: 2.75em;
     color: var(--clr-gray);
 
@@ -43,6 +46,8 @@
 }
 
 .inputs input {
+    width: 75%;
+
     font-size: 1.75em;
     color: var(--clr-gray);
 
@@ -65,16 +70,19 @@
 }
 
 .inputPassword input {
-    transform: translateX(0.4em);
+    transform: translateX(.75em);
 }
 
 .eyeIcon {
+    height: 1.2em;
+    width: 1.2em;
+
     font-size: 1.2em;
     color: var(--clr-gray);
 
     margin-bottom: .1em;
 
-    transform: translateX(-2.25em);
+    transform: translateX(.3em);
 }
 
 .button button {
@@ -111,10 +119,24 @@
 
     .inputs input{
         font-size: .75em;
+
+        margin: 1em 0em;
+    }
+
+    .inputPassword input {
+        transform: translateX(1.5em);
     }
 
     .eyeIcon {
         font-size: .3em;
+
+        margin: 0;
+        padding: 0;
+
+        height: 1.6em;
+        width: 1.6em;
+
+        transform: translateX(5em);
     }
 
     .button button{

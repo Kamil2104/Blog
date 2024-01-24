@@ -39,7 +39,6 @@ const Form = () => {
                     icon={showPassword ? faEyeSlash : faEye}
                     onClick={togglePasswordVisibility}
                     className='eyeIcon'
-                    style={{width: '1.2em', height: '1.2em'}}
                 />
             </div>
         </div>

@@ -24,3 +24,23 @@ blogdb.connect((err) => {
 app.listen(PORT, () => {
     console.log("Listening on port:",`${PORT}`)
 })
+
+app.post('/login', (req, res) => {
+    const sql = "SELECT * FROM admin WHERE `login` = ? AND `password` = ?"
+    const values = [
+        req.body.login,
+        req.body.password
+    ]
+
+    blogdb.query(sql, values, (err, data) => {
+        if (err) {
+            return res.json("Error");
+        }
+
+        if (data.length > 0) {
+            return res.json("Success")
+        } else {
+            return res.json("Fail")
+        }
+    });
+})

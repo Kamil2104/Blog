@@ -21,6 +21,16 @@ const Form = () => {
     }
 
     const handleLogin = () => {
+        if (isEmpty(loginRef.current.value)) {
+            // Empty login
+            return 0;
+        }
+
+        if(isEmpty(passwordRef.current.value)) {
+            // Empty password
+            return 0;
+        }
+
         const values = {
             login: loginRef.current.value,
             password: passwordRef.current.value

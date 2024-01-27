@@ -5,3 +5,9 @@ export function isEmpty(text) {
 
     return false
 }
+
+export function addIsEmptyErrorStyle(inputId) {
+    var input = document.getElementById(inputId);
+
+    input.classList.add('redBorder')
+}

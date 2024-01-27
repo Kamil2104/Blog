@@ -3,6 +3,8 @@
     --clr-light-black: rgb(16, 16, 16);
     --clr-gray: rgb(145, 145, 145);
     --clr-dark-gray: rgb(97, 97, 97);
+
+    --clr-error: rgb(95, 0, 0);
 }
 
 ::selection {
@@ -58,6 +60,10 @@
 
     border: none;
     border-bottom: .1em solid var(--clr-gray);
+}
+
+.inputs input.redBorder {
+    border-bottom: .1em solid var(--clr-error);
 }
 
 .inputs input:focus {

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import Authentication from './components/authentication/Main.jsx';
-import AdminPanel from './components/main/Main.jsx';
+import Authentication from './components/authentication/Authentication.jsx';
+import AdminPanel from './components/main/AdminPanel.jsx';
 
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 

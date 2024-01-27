@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import { faLock, faLockOpen } from '@fortawesome/free-solid-svg-icons'
 
-import { isEmpty, addIsEmptyErrorStyle, deleteIsEmptyErrorStyle } from '../validation/inputsHandler'
-import { showParagraph, hideParagraph } from '../validation/errorParagraphsHandler' 
+import { isEmpty } from '../validation/isEmpty'
+import { showParagraph, hideParagraph } from '../functions/errorParagraphsHandler' 
+import { addIsEmptyErrorStyle, deleteIsEmptyErrorStyle } from '../functions/borderErrorStyleHandler'
 
 import axios from 'axios'
 

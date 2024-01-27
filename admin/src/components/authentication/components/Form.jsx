@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
@@ -29,6 +30,8 @@ const Form = () => {
 
     const loginErrorParagraphRef = useRef("")
     const passwordErrorParagraphRef = useRef("")
+
+    const navigate = useNavigate()
 
     let lockIconClass = isLogged ? 'lockIcon rotate' : 'lockIcon';
 
@@ -105,6 +108,10 @@ const Form = () => {
                     setTimeout(() => {
                         setIcon(faLockOpen)
                     }, 1000)
+
+                    setTimeout(() => {
+                        navigate('/adminPanel')
+                }, 3500)
                 } else if (res.data === "Invalid login") {
                     addIsEmptyErrorStyle(loginRef.current.id)
 

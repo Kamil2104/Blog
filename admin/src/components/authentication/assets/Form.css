@@ -146,6 +146,12 @@
         margin: 1em 0em;
     }
 
+    .inputs p {
+        font-size: 0.25em;
+
+        margin-left: 4.5em;
+    }
+
     .inputPassword input {
         transform: translateX(1.5em);
     }

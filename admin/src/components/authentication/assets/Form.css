@@ -4,7 +4,8 @@
     --clr-gray: rgb(145, 145, 145);
     --clr-dark-gray: rgb(97, 97, 97);
 
-    --clr-error: rgb(125, 0, 0);
+    --clr-border-error: rgb(125, 0, 0);
+    --clr-p-error: rgb(136, 0, 0);
 }
 
 ::selection {
@@ -53,7 +54,7 @@
     font-size: 1.75em;
     color: var(--clr-gray);
 
-    margin: 1em;
+    margin: 1em 1em 0.5em 1em;
     padding: 0em .15em;
 
     background-color: transparent;
@@ -62,8 +63,22 @@
     border-bottom: .1em solid var(--clr-gray);
 }
 
+.inputs p {
+    align-self:flex-start;
+
+    font-size: 1em;
+    font-weight: 800;
+
+    margin: 0;
+    margin-left: 3em;
+    
+    color: var(--clr-p-error);
+
+    visibility: hidden;
+}
+
 .inputs input.redBorder {
-    border-bottom: .1em solid var(--clr-error);
+    border-bottom: .1em solid var(--clr-border-error);
 }
 
 .inputs input:focus {

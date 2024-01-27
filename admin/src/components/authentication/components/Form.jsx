@@ -46,12 +46,18 @@ const Form = () => {
     // HANDLE LOGIN
 
     const handleLogin = () => {
-        if (isEmpty(loginRef.current.value)) {
+        if (isEmpty(loginValue) && isEmpty(passwordValue)) {
+            addIsEmptyErrorStyle(loginRef.current.id)
+            addIsEmptyErrorStyle(passwordRef.current.id)
+            return 0;
+        }
+
+        if (isEmpty(loginValue)) {
             addIsEmptyErrorStyle(loginRef.current.id)
             return 0;
         }
 
-        if(isEmpty(passwordRef.current.value)) {
+        if (isEmpty(passwordValue)) {
             addIsEmptyErrorStyle(passwordRef.current.id)
             return 0;
         }

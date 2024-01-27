@@ -20,13 +20,17 @@ const Form = () => {
     const [passwordErrorValue, setPasswordErrorValue] = useState('Error')
 
     const [showPassword, setShowPassword] = useState(false)
-    const [isLogged, setIsLogged] = useState(false)
+    const [isLogged, setIsLogged] = useState(null)
+
+    const [icon, setIcon] = useState(faLock)
 
     const loginRef = useRef("")
     const passwordRef = useRef("")
 
     const loginErrorParagraphRef = useRef("")
     const passwordErrorParagraphRef = useRef("")
+
+    let lockIconClass = isLogged ? 'lockIcon rotate' : 'lockIcon';
 
     useEffect(() => {
         if (!isEmpty(loginValue)) {
@@ -97,6 +101,10 @@ const Form = () => {
             .then(res => {
                 if (res.data === "Success") {
                     setIsLogged(true)
+                    
+                    setTimeout(() => {
+                        setIcon(faLockOpen)
+                    }, 1000)
                 } else if (res.data === "Invalid login") {
                     addIsEmptyErrorStyle(loginRef.current.id)
 
@@ -118,8 +126,8 @@ const Form = () => {
     <div className="form">
         <header>
             <FontAwesomeIcon 
-                icon={isLogged ? faLockOpen : faLock}
-                className="lockIcon"
+                icon={icon}
+                className={lockIconClass}
             />
         </header>
         <div className="inputs">

@@ -40,6 +40,10 @@
     margin-bottom: 1.5em;
 }
 
+.lockIcon.rotate {
+    animation: rotateLock 2s linear;
+}
+
 .inputs {
     display: flex;
     flex-direction: column;
@@ -119,6 +123,16 @@
 
 .button button:hover {
     cursor: pointer;
+}
+
+@keyframes rotateLock {
+    0%, 100% {
+        opacity: 1;
+      }
+
+    50% {
+        opacity: 0;
+      }
 }
 
 @media (max-width: 550px) or (max-height: 650px) {

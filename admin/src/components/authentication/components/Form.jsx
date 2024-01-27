@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
@@ -6,19 +6,44 @@ import { faLock } from '@fortawesome/free-solid-svg-icons'
 
 import axios from 'axios'
 
-import { isEmpty, addIsEmptyErrorStyle } from '../validation/isEmpty'
+import { isEmpty, addIsEmptyErrorStyle, deleteIsEmptyErrorStyle } from '../validation/inputsHandler'
 
 import '../assets/Form.css'
 
 const Form = () => {
+    const [loginValue, setLoginValue] = useState('')
+    const [passwordValue, setPasswordValue] = useState('')
+
     const [showPassword, setShowPassword] = useState(false)
 
     const loginRef = useRef("")
     const passwordRef = useRef("")
 
+    useEffect(() => {
+        if (!isEmpty(loginValue)) {
+            deleteIsEmptyErrorStyle(loginRef.current.id)
+        }
+    }, [loginValue])
+
+    useEffect(() => {
+        if (!isEmpty(passwordValue)) {
+            deleteIsEmptyErrorStyle(passwordRef.current.id)
+        }
+    }, [passwordValue])
+
+    const handleLoginChange = (event) => {
+        setLoginValue(event.target.value);
+    };
+
+    const handlePasswordChange = (event) => {
+        setPasswordValue(event.target.value)
+    }
+
     const togglePasswordVisibility = () => {
         setShowPassword(prev => !prev)
     }
+
+    // HANDLE LOGIN
 
     const handleLogin = () => {
         if (isEmpty(loginRef.current.value)) {
@@ -64,6 +89,7 @@ const Form = () => {
                 spellCheck="false" 
                 autoComplete="true"
                 placeholder="Username:"
+                onChange={handleLoginChange}
                 ref={loginRef}
             />
             <div className="inputPassword">
@@ -74,6 +100,7 @@ const Form = () => {
                     autoComplete="false"
                     placeholder="Password:"
                     ref={passwordRef} 
+                    onChange={handlePasswordChange}
                 />
                 <FontAwesomeIcon
                     icon={showPassword ? faEyeSlash : faEye}

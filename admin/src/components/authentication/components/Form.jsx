@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
-import { faLock } from '@fortawesome/free-solid-svg-icons'
+import { faLock, faLockOpen } from '@fortawesome/free-solid-svg-icons'
 
 import { isEmpty, addIsEmptyErrorStyle, deleteIsEmptyErrorStyle } from '../validation/inputsHandler'
 import { showParagraph, hideParagraph } from '../validation/errorParagraphsHandler' 
@@ -19,6 +19,7 @@ const Form = () => {
     const [passwordErrorValue, setPasswordErrorValue] = useState('Error')
 
     const [showPassword, setShowPassword] = useState(false)
+    const [isLogged, setIsLogged] = useState(false)
 
     const loginRef = useRef("")
     const passwordRef = useRef("")
@@ -94,7 +95,7 @@ const Form = () => {
         axios.post('http://localhost:3001/login', values)
             .then(res => {
                 if (res.data === "Success") {
-                    // Navigate
+                    setIsLogged(true)
                 } else if (res.data === "Invalid login") {
                     addIsEmptyErrorStyle(loginRef.current.id)
 
@@ -116,7 +117,7 @@ const Form = () => {
     <div className="form">
         <header>
             <FontAwesomeIcon 
-                icon={faLock}
+                icon={isLogged ? faLockOpen : faLock}
                 className="lockIcon"
             />
         </header>

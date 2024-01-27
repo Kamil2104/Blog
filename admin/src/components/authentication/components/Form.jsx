@@ -15,8 +15,8 @@ const Form = () => {
     const [loginValue, setLoginValue] = useState('')
     const [passwordValue, setPasswordValue] = useState('')
 
-    const [loginErrorValue, setLoginErrorValue] = useState('Error')
-    const [passwordErrorValue, setPasswordErrorValue] = useState('Error')
+    const [loginErrorValue, setLoginErrorValue] = useState('')
+    const [passwordErrorValue, setPasswordErrorValue] = useState('')
 
     const [showPassword, setShowPassword] = useState(false)
 
@@ -93,10 +93,18 @@ const Form = () => {
         
         axios.post('http://localhost:3001/login', values)
             .then(res => {
-                if(res.data === "Success") {
+                if (res.data === "Success") {
                     // Navigate
-                } else if (res.data === "Fail") {
-                    // Incorrect login or password
+                } else if (res.data === "Invalid login") {
+                    addIsEmptyErrorStyle(loginRef.current.id)
+
+                    setLoginErrorValue("Invalid login.")
+                    showParagraph(loginErrorParagraphRef.current.id)
+                } else if (res.data === "Invalid password") {
+                    addIsEmptyErrorStyle(passwordRef.current.id)
+
+                    setPasswordErrorValue("Invalid password.")
+                    showParagraph(passwordErrorParagraphRef.current.id)
                 } else {
                     alert("Something went wrong with our servers. Try again later.")
                 }

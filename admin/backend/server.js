@@ -26,21 +26,33 @@ app.listen(PORT, () => {
 })
 
 app.post('/login', (req, res) => {
-    const sql = "SELECT * FROM admin WHERE `login` = ? AND `password` = ?"
+    const loginQuery = "SELECT * FROM admin WHERE `login` = ?"
+    const passwordQuery = "SELECT * FROM admin WHERE `login` = ? AND `password` = ?"
+
     const values = [
         req.body.login,
         req.body.password
     ]
 
-    blogdb.query(sql, values, (err, data) => {
+    blogdb.query(loginQuery, values[0], (err, data) => {
         if (err) {
-            return res.json("Error");
+            return res.json("Error")
         }
 
         if (data.length > 0) {
-            return res.json("Success")
+            blogdb.query(passwordQuery, values, (err, data) => {
+                if (err) {
+                    return res.json("Error")
+                }
+
+                if (data.length > 0) {
+                    return res.json("Success")
+                } else {
+                    return res.json("Invalid password")
+                }
+            })
         } else {
-            return res.json("Fail")
+            return res.json("Invalid login")
         }
     });
 })

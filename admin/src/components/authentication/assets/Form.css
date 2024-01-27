@@ -3,6 +3,8 @@
     --clr-light-black: rgb(16, 16, 16);
     --clr-gray: rgb(145, 145, 145);
     --clr-dark-gray: rgb(97, 97, 97);
+
+    --clr-border-error: rgb(125, 0, 0);
 }
 
 ::selection {
@@ -38,6 +40,10 @@
     margin-bottom: 1.5em;
 }
 
+.lockIcon.rotate {
+    animation: rotateLock 2s linear;
+}
+
 .inputs {
     display: flex;
     flex-direction: column;
@@ -51,13 +57,31 @@
     font-size: 1.75em;
     color: var(--clr-gray);
 
-    margin: 1em;
+    margin: 1em 1em 0.5em 1em;
     padding: 0em .15em;
 
     background-color: transparent;
 
     border: none;
     border-bottom: .1em solid var(--clr-gray);
+}
+
+.inputs p {
+    align-self:flex-start;
+
+    font-size: 1em;
+    font-weight: 800;
+
+    margin: 0;
+    margin-left: 3em;
+    
+    color: transparent;
+
+    visibility: visible;
+}
+
+.inputs input.redBorder {
+    border-bottom: .1em solid var(--clr-border-error);
 }
 
 .inputs input:focus {
@@ -101,6 +125,16 @@
     cursor: pointer;
 }
 
+@keyframes rotateLock {
+    0%, 100% {
+        opacity: 1;
+      }
+
+    50% {
+        opacity: 0;
+      }
+}
+
 @media (max-width: 550px) or (max-height: 650px) {
     .form {
         width: 175px;
@@ -123,6 +157,12 @@
         font-size: .75em;
 
         margin: 1em 0em;
+    }
+
+    .inputs p {
+        font-size: 0.25em;
+
+        margin-left: 4.5em;
     }
 
     .inputPassword input {

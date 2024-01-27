@@ -5,7 +5,6 @@
     --clr-dark-gray: rgb(97, 97, 97);
 
     --clr-border-error: rgb(125, 0, 0);
-    --clr-p-error: rgb(136, 0, 0);
 }
 
 ::selection {
@@ -72,9 +71,9 @@
     margin: 0;
     margin-left: 3em;
     
-    color: var(--clr-p-error);
+    color: transparent;
 
-    visibility: hidden;
+    visibility: visible;
 }
 
 .inputs input.redBorder {

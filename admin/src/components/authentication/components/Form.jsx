@@ -15,8 +15,8 @@ const Form = () => {
     const [loginValue, setLoginValue] = useState('')
     const [passwordValue, setPasswordValue] = useState('')
 
-    const [loginErrorValue, setLoginErrorValue] = useState('')
-    const [passwordErrorValue, setPasswordErrorValue] = useState('')
+    const [loginErrorValue, setLoginErrorValue] = useState('Error')
+    const [passwordErrorValue, setPasswordErrorValue] = useState('Error')
 
     const [showPassword, setShowPassword] = useState(false)
 

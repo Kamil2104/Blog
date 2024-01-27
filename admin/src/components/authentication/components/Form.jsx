@@ -36,6 +36,10 @@ const Form = () => {
     let lockIconClass = isLogged ? 'lockIcon rotate' : 'lockIcon';
 
     useEffect(() => {
+        document.title = "Blog - log in"
+    }, [])
+
+    useEffect(() => {
         if (!isEmpty(loginValue)) {
             deleteIsEmptyErrorStyle(loginRef.current.id)
             hideParagraph(loginErrorParagraphRef.current.id)

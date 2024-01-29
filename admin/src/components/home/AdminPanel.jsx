@@ -1,4 +1,4 @@
-const Main = () => {
+const AdminPanel = () => {
   return (
     <div> 
       <h1> AAA </h1>
@@ -6,4 +6,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default AdminPanel

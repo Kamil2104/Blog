@@ -1,6 +1,8 @@
+import './assets/AdminPanel.css'
+
 const AdminPanel = () => {
   return (
-    <div> 
+    <div className="adminPanel"> 
       <h1> AAA </h1>
     </div>
   )

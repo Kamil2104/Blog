@@ -1,0 +1,15 @@
+:root {
+    --clr-bg-color: rgb(19, 19, 19);
+}
+
+.adminPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100dvh;
+    width: 100%;
+
+    background-color: var(--clr-bg-color);
+}

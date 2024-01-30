@@ -20,6 +20,7 @@ const AdminPanel = () => {
     } else if (res.data === "Fail") {
       setLogged(false)
     } else {
+      setLogged(null)
       alert("Something went wrong with our servers. Try again later.")
     }
   })
@@ -38,7 +39,7 @@ const AdminPanel = () => {
             <div className='blankContainer'></div>
           )}
         </>
-      ) : !logged ? (
+      ) : logged === false ? (
         <NotLoggedIn />
       ) : (
         <div className="blankContainer"> </div>

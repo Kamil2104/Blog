@@ -6,6 +6,7 @@ class Actions {
     authentication(req, res) {
         const loginQuery = "SELECT * FROM admin WHERE `login` = ?"
         const passwordQuery = "SELECT * FROM admin WHERE `login` = ? AND `password` = ?"
+        const setLoggedQuery = "UPDATE `admin` SET `logged` = 1 WHERE `login` = 'admin'"
     
         const values = [
             req.body.login,
@@ -24,7 +25,18 @@ class Actions {
                     }
     
                     if (data.length > 0) {
-                        return res.json("Success")
+                        // return res.json("Success")
+                        blogdb.query(setLoggedQuery, (err, data) => {
+                            if (err) {
+                                return res.json("Error")
+                            }
+
+                            if (data.affectedRows > 0) {
+                                return res.json ("Success")
+                            } else {
+                                return res.json ("Error")
+                            }
+                        })
                     } else {
                         return res.json("Invalid password")
                     }

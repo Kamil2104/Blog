@@ -41,7 +41,7 @@
 }
 
 .lockIcon.rotate {
-    animation: rotateLock 2s linear;
+    animation: changeLock 2s linear;
 }
 
 .inputs {
@@ -125,7 +125,7 @@
     cursor: pointer;
 }
 
-@keyframes rotateLock {
+@keyframes changeLock {
     0%, 100% {
         opacity: 1;
       }

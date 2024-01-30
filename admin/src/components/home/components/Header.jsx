@@ -1,6 +1,16 @@
+import '../assets/Header.css'
+
 const Header = () => {
   return (
-    <div>Header</div>
+    <header>
+        <menu>
+            <a> Create a blog </a>
+            <a> Manage blogs </a>
+        </menu>
+        <aside>
+            <a> Log out </a>
+        </aside>
+    </header>
   )
 }
 

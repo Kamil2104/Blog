@@ -1,0 +1,59 @@
+:root {
+    --clr-black: rgb(22, 22, 22);
+    --clr-light-black: rgb(16, 16, 16);
+    --clr-gray: rgb(145, 145, 145);
+    --clr-dark-gray: rgb(97, 97, 97);
+}
+
+.adminPanel header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    height: 100px;
+    width: 100%;
+
+    color: var(--clr-gray);
+    background-color: var(--clr-light-black);
+}
+
+header a {
+    font-size: 1.5em;
+
+    margin: 0;
+}
+
+header a:hover {
+    cursor: pointer;
+    text-decoration: underline; 
+}
+
+/* MENU */
+
+menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+
+    height: 100%;
+
+    margin: 0;
+    padding: 0em 4em;
+}
+
+/* ASIDE */
+
+aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+
+    height: 100%;
+
+    margin: 0;
+    padding: 0em 4em;
+
+    flex: 1;
+}

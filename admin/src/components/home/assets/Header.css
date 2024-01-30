@@ -2,6 +2,7 @@
     --clr-black: rgb(22, 22, 22);
     --clr-light-black: rgb(16, 16, 16);
     --clr-gray: rgb(145, 145, 145);
+    --clr-light-gray: rgb(181, 181, 181);
     --clr-dark-gray: rgb(97, 97, 97);
 }
 
@@ -24,6 +25,8 @@ header a {
 }
 
 header a:hover {
+    color: var(--clr-light-gray);
+
     cursor: pointer;
     text-decoration: underline; 
 }

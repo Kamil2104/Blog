@@ -1,14 +1,27 @@
 import '../assets/Header.css'
 
-const Header = () => {
+// eslint-disable-next-line react/prop-types
+const Header = ({ setActualPanel }) => {
+    const handleCreateBlog = () => {
+        setActualPanel("Create")
+    }
+
+    const handleManageBlogs = () => {
+        setActualPanel("Manage")
+    }
+
+    const handleLogOut = () => {
+
+    }
+
   return (
     <header>
         <menu>
-            <a> Create a blog </a>
-            <a> Manage blogs </a>
+            <a onClick={handleCreateBlog}> Create a blog </a>
+            <a onClick={handleManageBlogs}> Manage blogs </a>
         </menu>
         <aside>
-            <a> Log out </a>
+            <a onClick={handleLogOut}> Log out </a>
         </aside>
     </header>
   )

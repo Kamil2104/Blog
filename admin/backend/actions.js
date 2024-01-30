@@ -62,6 +62,22 @@ class Actions {
             }
         }) 
     }
+
+    loggedIn(req, res) {
+        const query = "SELECT * FROM `admin` WHERE `logged` = true" 
+    
+        blogdb.query(query, (err, data) => {
+            if (err) {
+                return res.json("Error")
+            }
+
+            if (data.length > 0) {
+                return res.json("Success")
+            } else {
+                return res.json("Fail")
+            }
+        })
+    }
 }
 
 module.exports = new Actions()

@@ -1,9 +1,11 @@
+import Header from './components/Header'
+
 import './assets/AdminPanel.css'
 
 const AdminPanel = () => {
   return (
     <div className="adminPanel"> 
-      <h1> AAA </h1>
+      <Header />
     </div>
   )
 }

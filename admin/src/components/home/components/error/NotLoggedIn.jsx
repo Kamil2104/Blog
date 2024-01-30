@@ -1,7 +1,18 @@
+import { useNavigate } from 'react-router-dom'
+
+import './assets/NotLoggedIn.css'
+
 const NotLoggedIn = () => {
+  const navigate = useNavigate()
+  
+  const handleNavigateToAuthentication = () => {
+    navigate('/')
+  }
+
   return (
     <div className="notLoggedIn">
-        You are not logged in!
+        <p> You are not logged in! </p>
+        <button onClick={handleNavigateToAuthentication}> Go to login page </button>
     </div>
   )
 }

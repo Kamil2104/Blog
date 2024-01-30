@@ -13,13 +13,13 @@ const AdminPanel = () => {
 
     <div className="adminPanel"> 
       <Header setActualPanel={setActualPanel} />
-      { actualPanel === "Create" ? (
+            {/* { actualPanel === "Create" ? (
         <CreateBlogs />
       ) : actualPanel === "Manage" ? (
         <ManageBlogs />
-      ) : (
+      ) : ( */}
         <div className='blankContainer'> </div>
-      )}
+      {/* )} */} 
     </div>
   )
 }

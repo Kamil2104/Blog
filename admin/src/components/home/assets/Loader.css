@@ -1,0 +1,39 @@
+:root {
+    --clr-light-gray: rgb(181, 181, 181);
+    --clr-dark-gray: rgb(97, 97, 97);
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100dvh;
+    width: 100%;
+}
+
+.loaderAnimation::before {
+    background-color: wheat;
+}
+
+.loaderAnimation {
+    height: 120px;
+    width: 120px;
+
+    border-radius: 50%;
+
+    border: .5em solid var(--clr-light-gray);
+    border-top: .5em solid var(--clr-dark-gray);
+
+    animation: rotateLoader 1.5s linear infinite;
+}
+
+@keyframes rotateLoader{
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

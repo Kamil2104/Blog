@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Header from './components/Header'
 import CreateBlogs from './components/CreateBlogs'
 import ManageBlogs from './components/ManageBlogs'
+import Loader from './components/Loader'
 import NotLoggedIn from './components/error/NotLoggedIn'
 
 import axios from 'axios'
@@ -42,7 +43,7 @@ const AdminPanel = () => {
       ) : logged === false ? (
         <NotLoggedIn />
       ) : (
-        <div className="blankContainer"> </div>
+        <Loader />
       )}
     </div>
   )

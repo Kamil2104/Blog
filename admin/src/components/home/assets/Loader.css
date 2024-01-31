@@ -13,16 +13,16 @@
 }
 
 .loaderAnimation {
-    height: 155px;
-    width: 155px;
+    height: 105px;
+    width: 105px;
 
     margin: 0;
     padding: 0;
 
     border-radius: 50%;
 
-    border: 1.5em solid var(--clr-light-gray);
-    border-top: 1.5em solid var(--clr-dark-gray);
+    border: 1em solid var(--clr-light-gray);
+    border-top: 1em solid var(--clr-dark-gray);
 
     animation: rotateLoader 1.5s linear infinite;
 }
@@ -39,11 +39,11 @@
 
 @media screen and (max-width: 260px) {
     .loaderAnimation {
-        height: 60px;
-        width: 60px;
+        height: 30px;
+        width: 30px;
 
-        border: .5em solid var(--clr-light-gray);
-        border-top: .5em solid var(--clr-dark-gray);
+        border: .25em solid var(--clr-light-gray);
+        border-top: .25em solid var(--clr-dark-gray);
     }
 }
 

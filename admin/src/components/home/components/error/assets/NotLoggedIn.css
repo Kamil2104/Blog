@@ -1,0 +1,50 @@
+:root {
+    --clr-gray: rgb(145, 145, 145);
+    --clr-dark-gray: rgb(97, 97, 97);
+}
+
+.notLoggedIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    height: 100dvh;
+    width: 100%;
+}
+
+.notLoggedIn p {
+    font-size: 2.25em;
+
+    color: var(--clr-dark-gray);
+}
+
+.notLoggedIn button {
+    padding: .35em .75em;
+
+    font-size: 1.5em;
+
+    color: var(--clr-dark-gray);
+    background-color: transparent;
+
+    border: .12em solid var(--clr-dark-gray);
+}
+
+.notLoggedIn button:hover {
+    cursor: pointer;
+
+    color: var(--clr-gray);
+    border-color: var(--clr-gray);
+}
+
+@media screen and (max-width: 350px) {
+    .notLoggedIn p {
+        font-size: 1.2em;
+    }
+
+    .notLoggedIn button {
+        font-size: 1.2em;
+    }
+}

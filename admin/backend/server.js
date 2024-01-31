@@ -23,3 +23,5 @@ app.use('/', router);
 router.post('/login', actions.authentication)
 
 router.post('/logOut', actions.logOut)
+
+router.post('/loggedIn', actions.loggedIn)

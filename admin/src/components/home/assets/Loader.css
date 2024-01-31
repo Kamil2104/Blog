@@ -46,3 +46,13 @@
         border-top: .5em solid var(--clr-dark-gray);
     }
 }
+
+@media screen and (max-height: 230px) {
+    .loaderAnimation {
+        height: 60px;
+        width: 60px;
+
+        border: .5em solid var(--clr-light-gray);
+        border-top: .5em solid var(--clr-dark-gray);
+    }
+}

@@ -2,8 +2,8 @@
 
 const blogdb = require('./connection')
 
-class Actions {
-    authentication(req, res) {
+class Authentication {
+    logIn(req, res) {
         const loginQuery = "SELECT * FROM admin WHERE `login` = ?"
         const passwordQuery = "SELECT * FROM admin WHERE `login` = ? AND `password` = ?"
         const setLoggedQuery = "UPDATE `admin` SET `logged` = 1 WHERE `login` = 'admin'"
@@ -80,4 +80,4 @@ class Actions {
     }
 }
 
-module.exports = new Actions()
+module.exports = new Authentication()

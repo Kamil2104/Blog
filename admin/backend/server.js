@@ -6,7 +6,7 @@ const cors = require("cors");
 const router = express.Router();
 const PORT = 3001;
 
-const actions = require('./actions')
+const authentication = require('./authentication')
 
 const app = express();
 app.use(express.json())
@@ -20,8 +20,8 @@ app.use('/', router);
 
 // Actions
 
-router.post('/login', actions.authentication)
+router.post('/login', authentication.logIn)
 
-router.post('/logOut', actions.logOut)
+router.post('/logOut', authentication.logOut)
 
-router.post('/loggedIn', actions.loggedIn)
+router.post('/loggedIn', authentication.loggedIn)

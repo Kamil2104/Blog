@@ -1,0 +1,15 @@
+.createBlogs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    padding: 3em 0em;
+}
+
+.createBlogs h1 {
+    color: rgb(132, 132, 132);
+}

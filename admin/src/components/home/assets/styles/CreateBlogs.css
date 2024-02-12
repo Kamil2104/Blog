@@ -31,7 +31,7 @@
     align-items: left;
     gap: 2em;
 
-    width: 70%;
+    width: 60%;
 }
 
 .createBlogs .addBlogForm .rightPanel {
@@ -40,7 +40,9 @@
     justify-content: center;
     align-items: center;
 
-    width: 30%;
+    width: 40%;
+
+    padding-top: 5em;
 }
 
 .createBlogs .addBlogForm h1 {
@@ -62,7 +64,7 @@
 }
 
 .createBlogs .addBlogForm input[type="text"] {
-    width: 70%;
+    width: 850px;
 
     font-size: 1.15em;
     color: var(--clr-gray);
@@ -81,7 +83,7 @@
 
 .createBlogs .addBlogForm textarea {
     height: 360px;
-    width: 70%;
+    width: 850px;
     
     font-size: 1.15em;
     font-family: Arial, Helvetica, sans-serif;
@@ -132,7 +134,7 @@
 
     font-size: 1.35em;
 
-    margin-top: 1.5em;
+    margin-top: 2.5em;
 
     color: var(--clr-gray);
     background-color: transparent;
@@ -159,8 +161,8 @@
 }
 
 .createBlogs .blogPhotoContainer img {
-    height: 300px;
-    width: 250px;
+    height: 450px;
+    width: 350px;
 
     filter: brightness(0.25);
 }
@@ -186,7 +188,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+
+    gap: 2em;
 }
 
 @keyframes showLabel {

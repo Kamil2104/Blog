@@ -1,8 +1,33 @@
+import { useState, useRef } from "react"
+
 import { handleChangesOnInputFields } from "../functions/inputFieldsHandler"
 
 import noImageAvailable from '../assets/NoImageAvailable.png'
 
 const Form = () => {
+  const [isPhotoSelected, setIsPhotoSelected] = useState(false)
+  const [selectedBlogPhoto, setSelectedBlogPhoto] = useState(null) 
+
+  const blogPhotoRef = useRef(null)
+
+  const handleBlogPhotoButtonClick = () => {
+    if (blogPhotoRef.current) {
+        blogPhotoRef.current.click()
+    }
+  }
+
+  const handleDisplayingBlogPhoto = (event) => {
+    const selectedPhoto = event.target.files[0]
+
+    if (selectedPhoto) {
+        setIsPhotoSelected(true)
+        setSelectedBlogPhoto(selectedPhoto)
+    } else {
+        setIsPhotoSelected(false)
+        setSelectedBlogPhoto(null)
+    }
+  }
+
   return (
     <>
         <div className="addBlogForm">
@@ -35,15 +60,21 @@ const Form = () => {
             </section>
             <section className="rightPanel">
                 <section className="blogPhotoContainer">
-                    <img src={noImageAvailable} alt="No image available" />
+                    <img 
+                        src={isPhotoSelected ? URL.createObjectURL(selectedBlogPhoto): noImageAvailable} 
+                        alt="No image available" 
+                    />
                     <button 
                         type="button"
-                    > Submit </button>
+                        onClick={handleBlogPhotoButtonClick}
+                    > Choose </button>
                     <input 
                         type="file" 
                         id="blogPhoto"
                         accept="image/png, image/jpg, image/jpeg"
                         style={{ display: "none" }}
+                        ref={blogPhotoRef}
+                        onChange={handleDisplayingBlogPhoto}
                     />
                 </section>
             </section>

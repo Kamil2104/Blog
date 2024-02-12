@@ -181,6 +181,14 @@
     cursor: pointer;
 }
 
+.createBlogs .blogPhotoContainer .blogPhotoButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
 @keyframes showLabel {
     0% {
         opacity: 0;

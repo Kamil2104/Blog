@@ -28,6 +28,11 @@ const Form = () => {
     }
   }
 
+  const handleDeletingBlogPhoto = () => {
+    setIsPhotoSelected(false)
+    setSelectedBlogPhoto(null)
+  }
+
   return (
     <>
         <div className="addBlogForm">
@@ -64,10 +69,15 @@ const Form = () => {
                         src={isPhotoSelected ? URL.createObjectURL(selectedBlogPhoto): noImageAvailable} 
                         alt="No image available" 
                     />
-                    <button 
-                        type="button"
-                        onClick={handleBlogPhotoButtonClick}
-                    > Choose </button>
+                    <section className="blogPhotoButtons">
+                        <button 
+                            type="button"
+                            onClick={handleBlogPhotoButtonClick}
+                        > Choose </button>
+                        <button 
+                            onClick={handleDeletingBlogPhoto}
+                        > Delete </button>
+                    </section>
                     <input 
                         type="file" 
                         id="blogPhoto"

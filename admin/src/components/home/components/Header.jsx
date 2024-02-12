@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 
 import axios from 'axios'
 
-import '../assets/Header.css'
+import '../assets/styles/Header.css'
 
 // eslint-disable-next-line react/prop-types
 const Header = ({ setActualPanel }) => {

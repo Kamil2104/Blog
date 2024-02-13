@@ -5,10 +5,29 @@ import { handleChangesOnInputFields } from "../functions/inputFieldsHandler"
 import noImageAvailable from '../assets/NoImageAvailable.png'
 
 const Form = () => {
+  const [nameLength, setNameLength] = useState(0)
+  const [descriptionLength, setDescriptionLength] = useState(0)
+
   const [isPhotoSelected, setIsPhotoSelected] = useState(false)
   const [selectedBlogPhoto, setSelectedBlogPhoto] = useState(null) 
 
+  const blogNameRef = useRef("")
+  const blogDescriptionRef = useRef("")
   const blogPhotoRef = useRef(null)
+
+  const handleNameFieldLength = () => {
+    const nameValue = blogNameRef.current.value
+    const nameLength = nameValue.length
+
+    setNameLength(nameLength)
+  }
+
+  const handleDescriptionFieldLength = () => {
+    const descriptionValue = blogDescriptionRef.current.value
+    const descriptionLength = descriptionValue.length
+    
+    setDescriptionLength(descriptionLength)
+  }
 
   const handleBlogPhotoButtonClick = () => {
     if (blogPhotoRef.current) {
@@ -48,8 +67,16 @@ const Form = () => {
                         id="blogName"
                         placeholder="Name:"
                         autoComplete="off"
-                        onChange={() => handleChangesOnInputFields("blogName", "labelName")}
+                        maxLength={100}
+                        ref={blogNameRef}
+                        onChange={() => {
+                            handleChangesOnInputFields("blogName", "labelName");
+                            handleNameFieldLength()}
+                        }
                     />
+                    <p
+                        id="paragraphNameLength"
+                    > {nameLength} / 100 </p>
                 </section>
                 <section className="blogDescriptionContainer">
                     <label 
@@ -59,8 +86,16 @@ const Form = () => {
                     <textarea 
                         id="blogDescription" 
                         placeholder="Description:"
-                        onChange={() => handleChangesOnInputFields("blogDescription", "labelDescription")}
+                        maxLength={1000}
+                        ref={blogDescriptionRef}
+                        onChange={() => {
+                            handleChangesOnInputFields("blogDescription", "labelDescription");
+                            handleDescriptionFieldLength()}
+                        }
                     />
+                    <p
+                        id="paragraphDescriptionLength"
+                    > {descriptionLength} / 1000 </p>
                 </section>
             </section>
             <section className="rightPanel">

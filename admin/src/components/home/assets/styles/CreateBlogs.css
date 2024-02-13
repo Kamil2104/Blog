@@ -42,7 +42,7 @@
 
     width: 40%;
 
-    padding-top: 5em;
+    padding-top: 3em;
 }
 
 .createBlogs .addBlogForm h1 {
@@ -134,7 +134,7 @@
 
     font-size: 1.35em;
 
-    margin-top: 2.5em;
+    margin-top: 1.5em;
 
     color: var(--clr-gray);
     background-color: transparent;
@@ -161,10 +161,14 @@
 }
 
 .createBlogs .blogPhotoContainer img {
-    height: 450px;
-    width: 350px;
+    min-height: 450px;
+    max-height: 575px;
+    
+    min-width: 350px;
+    max-width: 700px;
 
     filter: brightness(0.25);
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .createBlogs .blogPhotoContainer button {

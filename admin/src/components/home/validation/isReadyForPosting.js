@@ -16,7 +16,7 @@ function isPhotoAdded(selectedPhoto) {
     return false
 }
 
-export function isReady(nameText, nameId, descriptionText, descriptionId, selectedPhoto, buttonChoosePhotoId) {
+export function isBlogReadyToBeAdded(nameText, nameId, descriptionText, descriptionId, selectedPhoto, buttonChoosePhotoId) {
     if (!isTextFieldFilled(nameText)) {
         setRedBorder(nameId)
         return false

@@ -2,7 +2,7 @@ import { useState, useRef } from "react"
 
 import { handleChangesOnInputFields } from "../functions/inputFieldsHandler"
 import { setDefaultBorder } from "../functions/setDefaultBorderColorHandler"
-import { isReady } from "../validation/isReadyForPosting"
+import { isBlogReadyToBeAdded } from "../validation/isReadyForPosting"
 
 import noImageAvailable from '../assets/NoImageAvailable.png'
 
@@ -58,7 +58,7 @@ const Form = () => {
   }
 
   const handleAddingBlog = () => {
-    if (isReady(
+    if (isBlogReadyToBeAdded(
         blogNameRef.current.value, 
         blogNameRef.current.id, 
         blogDescriptionRef.current.value, 

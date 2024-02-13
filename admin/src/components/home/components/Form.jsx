@@ -1,6 +1,8 @@
 import { useState, useRef } from "react"
 
 import { handleChangesOnInputFields } from "../functions/inputFieldsHandler"
+import { setDefaultBorder } from "../functions/setDefaultBorderColorHandler"
+import { isReady } from "../validation/isReadyForPosting"
 
 import noImageAvailable from '../assets/NoImageAvailable.png'
 
@@ -14,6 +16,7 @@ const Form = () => {
   const blogNameRef = useRef("")
   const blogDescriptionRef = useRef("")
   const blogPhotoRef = useRef(null)
+  const blogPhotoButtonChooseRef = useRef()
 
   const handleNameFieldLength = () => {
     const nameValue = blogNameRef.current.value
@@ -41,6 +44,8 @@ const Form = () => {
     if (selectedPhoto) {
         setIsPhotoSelected(true)
         setSelectedBlogPhoto(selectedPhoto)
+        
+        setDefaultBorder(blogPhotoButtonChooseRef.current.id)
     } else {
         setIsPhotoSelected(false)
         setSelectedBlogPhoto(null)
@@ -50,6 +55,19 @@ const Form = () => {
   const handleDeletingBlogPhoto = () => {
     setIsPhotoSelected(false)
     setSelectedBlogPhoto(null)
+  }
+
+  const handleAddingBlog = () => {
+    if (isReady(
+        blogNameRef.current.value, 
+        blogNameRef.current.id, 
+        blogDescriptionRef.current.value, 
+        blogDescriptionRef.current.id,
+        selectedBlogPhoto,
+        blogPhotoButtonChooseRef.current.id)) 
+        {
+            alert("Ready for posting")
+    }
   }
 
   return (
@@ -71,7 +89,8 @@ const Form = () => {
                         ref={blogNameRef}
                         onChange={() => {
                             handleChangesOnInputFields("blogName", "labelName");
-                            handleNameFieldLength()}
+                            handleNameFieldLength();
+                            setDefaultBorder(blogNameRef.current.id);}
                         }
                     />
                     <p
@@ -90,7 +109,8 @@ const Form = () => {
                         ref={blogDescriptionRef}
                         onChange={() => {
                             handleChangesOnInputFields("blogDescription", "labelDescription");
-                            handleDescriptionFieldLength()}
+                            handleDescriptionFieldLength();
+                            setDefaultBorder(blogDescriptionRef.current.id)}
                         }
                     />
                     <p
@@ -107,6 +127,8 @@ const Form = () => {
                     <section className="blogPhotoButtons">
                         <button 
                             type="button"
+                            id="blogPhotoButtonChoose"
+                            ref={blogPhotoButtonChooseRef}
                             onClick={handleBlogPhotoButtonClick}
                         > Choose </button>
                         <button 
@@ -125,7 +147,10 @@ const Form = () => {
             </section>
         </div>
         <div className="submitButton">
-            <button> Add </button>
+            <button
+                id="buttonSubmit"
+                onClick={handleAddingBlog}
+            > Add </button>
         </div>
     </>
   )

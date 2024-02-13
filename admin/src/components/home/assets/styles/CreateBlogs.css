@@ -29,7 +29,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: left;
-    gap: 2em;
+    gap: 1em;
 
     width: 850px;
 }

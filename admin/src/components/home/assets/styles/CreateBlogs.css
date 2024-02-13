@@ -31,6 +31,7 @@
     align-items: left;
     gap: 1em;
 
+    height: 600px;
     width: 850px;
 }
 
@@ -39,8 +40,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     flex: 1;
+
+    height: 600px;
 
     padding-top: 3em;
 }
@@ -143,7 +145,7 @@
 
     font-size: 1.35em;
 
-    margin-top: 1.5em;
+    margin-top: 3em;
 
     color: var(--clr-gray);
     background-color: transparent;
@@ -172,7 +174,7 @@
 .createBlogs .blogPhotoContainer img {
     min-height: 450px;
     max-height: 575px;
-    
+
     min-width: 350px;
     max-width: 700px;
 

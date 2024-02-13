@@ -55,6 +55,11 @@ const Form = () => {
   const handleDeletingBlogPhoto = () => {
     setIsPhotoSelected(false)
     setSelectedBlogPhoto(null)
+
+    // When the user deletes a file, we set the value of the "file" field to null, to allow it to select the same file again safely
+    if (blogPhotoRef.current) {
+        blogPhotoRef.current.value = null;
+    }
   }
 
   const handleAddingBlog = () => {

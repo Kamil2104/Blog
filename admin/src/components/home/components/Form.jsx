@@ -126,8 +126,9 @@ const Form = () => {
             <section className="rightPanel">
                 <section className="blogPhotoContainer">
                     <img 
-                        src={isPhotoSelected ? URL.createObjectURL(selectedBlogPhoto): noImageAvailable} 
+                        id="blogPhoto"
                         alt="No image available" 
+                        src={isPhotoSelected ? URL.createObjectURL(selectedBlogPhoto): noImageAvailable} 
                     />
                     <section className="blogPhotoButtons">
                         <button 

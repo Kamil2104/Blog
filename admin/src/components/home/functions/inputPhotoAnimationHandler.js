@@ -7,7 +7,7 @@ export function addPhotoErrorAnimationClassName() {
 
     setTimeout(() => {
         image.className = "animatedPhoto" 
-    }, 500)
+    }, 100)
 }
 
 function removePhotoErrorAnimationClassName() {

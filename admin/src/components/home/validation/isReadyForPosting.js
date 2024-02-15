@@ -1,5 +1,5 @@
 import { setRedBorder } from '../functions/setRedBorderHandler'
-import { addPhotoErrorAnimationClassName, removePhotoErrorAnimationClassName } from '../functions/inputFileAnimationHandler'
+import { addPhotoErrorAnimationClassName } from '../functions/inputPhotoAnimationHandler'
 
 function isTextFieldFilled(text) {
     if (text !== "") {
@@ -34,6 +34,5 @@ export function isBlogReadyToBeAdded(nameText, nameId, descriptionText, descript
         return false
     }
 
-    removePhotoErrorAnimationClassName()
     return true
 }

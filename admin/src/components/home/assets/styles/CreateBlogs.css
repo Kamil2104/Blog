@@ -186,6 +186,10 @@
     animation: heartBeatPhotoAnimation .5s;
 }
 
+.createBlogs .blogPhotoContainer img.restartAnimation {
+    animation: none;
+}
+
 .createBlogs .blogPhotoContainer button {
     height: 40px;
     width: 80px;

@@ -2,26 +2,33 @@
 
 const express = require("express");
 const cors = require("cors");
+const multer = require("multer"); 
 
 const router = express.Router();
 const PORT = 3001;
 
-const authentication = require('./authentication')
+const authentication = require('./authentication');
+const blogManagement = require('./blogManagement');
 
 const app = express();
-app.use(express.json())
-app.use(cors())
+app.use(express.json());
+app.use(cors());
+
+const storage = multer.memoryStorage(); // Przechowuje plik w pamięci (buffer)
+const upload = multer({ storage: storage });
 
 app.listen(PORT, () => {
-    console.log("Listening on port:",`${PORT}`)
-})
+    console.log("Listening on port:", `${PORT}`);
+});
 
 app.use('/', router);
 
 // Actions
 
-router.post('/login', authentication.logIn)
+// 1. Authentication:
+router.post('/login', authentication.logIn);
+router.post('/logOut', authentication.logOut);
+router.post('/loggedIn', authentication.loggedIn);
 
-router.post('/logOut', authentication.logOut)
-
-router.post('/loggedIn', authentication.loggedIn)
+// 2. Blog management:
+router.post('/addBlog', upload.single('photo'), blogManagement.addBlog);

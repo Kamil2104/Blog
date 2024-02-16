@@ -5,6 +5,7 @@ import { setDefaultBorder } from "../functions/setDefaultBorderColorHandler"
 import { isBlogReadyToBeAdded } from "../validation/isReadyForPosting"
 
 import noImageAvailable from '../assets/NoImageAvailable.png'
+import axios from "axios"
 
 const Form = () => {
   const [nameLength, setNameLength] = useState(0)
@@ -71,7 +72,26 @@ const Form = () => {
         selectedBlogPhoto,
         blogPhotoButtonChooseRef.current.id)) 
         {
-            alert("Ready for posting")
+            const values = new FormData();
+            values.append('description', blogDescriptionRef.current.value);
+            values.append('photo', selectedBlogPhoto);
+            values.append('name', blogNameRef.current.value);
+
+            axios.post('http://localhost:3001/addBlog', values)
+            .then(res => {
+                if (res.data === "Success") {
+                    // TODO: MAKE A TICK ANIMATION
+                    console.log("Success")
+                } else if (res.data === "Error (name)") {
+                    // TODO: Blog with this name already exists
+                    console.log("Error (name)")
+                } else {
+                    // TODO: Something went wrong with adding a blog
+                    console.log("Error")
+                }
+            })
+            .catch(err => console.log(err))
+
     }
   }
 

@@ -81,13 +81,10 @@ const Form = () => {
             .then(res => {
                 if (res.data === "Success") {
                     // TODO: MAKE A TICK ANIMATION
-                    console.log("Success")
                 } else if (res.data === "Error (name)") {
                     // TODO: Blog with this name already exists
-                    console.log("Error (name)")
                 } else {
-                    // TODO: Something went wrong with adding a blog
-                    console.log("Error")
+                    alert("Something went wrong with our servers. Try again later.")
                 }
             })
             .catch(err => console.log(err))

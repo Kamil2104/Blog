@@ -164,6 +164,21 @@
     flex-direction: column;
 }
 
+.createBlogs .blogNameContainer .blogNameParagraphsContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.createBlogs .blogNameContainer .blogNameParagraphsContainer p[id="blogNameErrorParagraph"] {
+    font-weight: 700;
+    color: rgb(125, 0, 0);
+
+    margin-left: 0.5em;
+    text-align: left;
+
+    visibility: hidden;
+}
+
 .createBlogs .blogPhotoContainer {
     justify-content: center;
     align-items: center;

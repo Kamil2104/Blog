@@ -3,6 +3,7 @@ import { useState, useRef } from "react"
 import { handleChangesOnInputFields } from "../functions/inputFieldsHandler"
 import { setDefaultBorder } from "../functions/setDefaultBorderColorHandler"
 import { isBlogReadyToBeAdded } from "../validation/isReadyForPosting"
+import { showBlogNameErrorParagraph } from "../functions/blogNameErrorParagraphHandler"
 
 import noImageAvailable from '../assets/NoImageAvailable.png'
 import axios from "axios"
@@ -82,7 +83,7 @@ const Form = () => {
                 if (res.data === "Success") {
                     // TODO: MAKE A TICK ANIMATION
                 } else if (res.data === "Error (name)") {
-                    // TODO: Blog with this name already exists
+                    showBlogNameErrorParagraph("blogNameErrorParagraph")
                 } else {
                     alert("Something went wrong with our servers. Try again later.")
                 }
@@ -110,14 +111,19 @@ const Form = () => {
                         maxLength={100}
                         ref={blogNameRef}
                         onChange={() => {
-                            handleChangesOnInputFields("blogName", "labelName");
+                            handleChangesOnInputFields("blogName", "labelName", "blogNameErrorParagraph");
                             handleNameFieldLength();
                             setDefaultBorder(blogNameRef.current.id);}
                         }
                     />
-                    <p
-                        id="paragraphNameLength"
-                    > {nameLength} / 100 </p>
+                    <section className="blogNameParagraphsContainer">
+                        <p
+                        id="blogNameErrorParagraph"      
+                        > Blog with this name already exists </p>
+                        <p
+                            id="paragraphNameLength"
+                        > {nameLength} / 100 </p>
+                    </section>
                 </section>
                 <section className="blogDescriptionContainer">
                     <label 

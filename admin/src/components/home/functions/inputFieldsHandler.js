@@ -1,6 +1,7 @@
-export function handleChangesOnInputFields(valueId ,labelId) {
+export function handleChangesOnInputFields(valueId, labelId, paragraphId) {
     let label = document.getElementById(labelId)
     let inputtedValue = document.getElementById(valueId)
+    let paragraph = document.getElementById(paragraphId)
 
     if (label && inputtedValue.value !== "") {
         label.style.visibility = "visible"
@@ -10,5 +11,9 @@ export function handleChangesOnInputFields(valueId ,labelId) {
     } else if (label && inputtedValue.value === "") {
         label.style.visibility = "hidden"
         label.classList.remove("animatedLabel")
+    }
+
+    if (paragraph) {
+        paragraph.style.visibility = "hidden"
     }
 }

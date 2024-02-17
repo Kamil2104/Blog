@@ -1,4 +1,5 @@
 import { useState, useRef } from "react"
+import { useNavigate } from "react-router-dom"
 
 import { handleChangesOnInputFields } from "../functions/inputFieldsHandler"
 import { setDefaultBorder } from "../functions/setDefaultBorderColorHandler"
@@ -6,9 +7,12 @@ import { isBlogReadyToBeAdded } from "../validation/isReadyForPosting"
 import { showBlogNameErrorParagraph } from "../functions/blogNameErrorParagraphHandler"
 
 import noImageAvailable from '../assets/NoImageAvailable.png'
+
 import axios from "axios"
 
 const Form = () => {
+  const navigate = useNavigate()
+
   const [nameLength, setNameLength] = useState(0)
   const [descriptionLength, setDescriptionLength] = useState(0)
 
@@ -81,7 +85,7 @@ const Form = () => {
             axios.post('http://localhost:3001/addBlog', values)
             .then(res => {
                 if (res.data === "Success") {
-                    // TODO: MAKE A TICK ANIMATION
+                    navigate('/successAnimation')
                 } else if (res.data === "Error (name)") {
                     showBlogNameErrorParagraph("blogNameErrorParagraph")
                 } else {
@@ -89,7 +93,6 @@ const Form = () => {
                 }
             })
             .catch(err => console.log(err))
-
     }
   }
 

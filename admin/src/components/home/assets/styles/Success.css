@@ -1,0 +1,136 @@
+:root {
+    --clr-success: rgb(17, 83, 0);
+}
+
+.successComponent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    height: 100dvh;
+    width: 100%;
+
+    z-index: 1;
+}
+
+.successComponent .successAnimationIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 180px;
+    width: 180px;
+
+    border-top: .5em solid var(--clr-success);
+    border-radius: 50%;
+
+    animation: rotateSuccessBorder 3s linear, showSuccessBorder 1s linear 3s forwards;
+}
+
+.successComponent .successAnimationIcon .checkIcon {
+    height: 100px;
+
+    color: var(--clr-success);
+
+    opacity: 0;
+
+    animation: showSuccessIcon 1s linear 4s forwards;
+}
+
+.successComponent .successAnimationParagraph p {
+    margin-top: 1em;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: var(--clr-success);
+
+    opacity: 0;
+
+    animation: showSuccessIcon 1s linear 5s forwards;
+
+    text-align: center;
+}
+
+@keyframes rotateSuccessBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(1080deg);
+    }
+}
+
+@keyframes showSuccessBorder {
+    0% {
+        border-top: .5em solid transparent;
+        border-right: .5em solid transparent;
+        border-bottom: .5em solid transparent;
+        border-left: .5em solid transparent;
+    }
+
+    100% {
+        border-top: .5em solid var(--clr-success);
+        border-right: .5em solid var(--clr-success);
+        border-bottom: .5em solid var(--clr-success);
+        border-left: .5em solid var(--clr-success);
+    }
+}
+
+@keyframes showSuccessIcon {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showSuccessParagraph {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .successComponent .successAnimationIcon {
+        height: 130px;
+        width: 130px;
+    }
+
+    .successComponent .successAnimationIcon .checkIcon {
+        height: 50px;
+    }
+
+    .successComponent .successAnimationParagraph p {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-height: 320px) {
+    .successComponent {
+        gap: 0em;
+    }
+
+    .successComponent .successAnimationIcon {
+        height: 90px;
+        width: 90px;
+    }
+
+    .successComponent .successAnimationIcon .checkIcon {
+        height: 50px;
+    }
+
+    .successComponent .successAnimationParagraph p {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,251 @@
+::root {
+    --clr-border: rgb(64, 64, 64);
+}
+
+.createBlogs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    padding: 1em 3em;
+}
+
+.createBlogs .addBlogForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: left;
+
+    gap: 3em;
+
+    width: 100%;
+}
+
+.createBlogs .addBlogForm .leftPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    gap: 1em;
+
+    height: 600px;
+    width: 850px;
+}
+
+.createBlogs .addBlogForm .rightPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    height: 600px;
+
+    padding-top: 3em;
+}
+
+.createBlogs .addBlogForm h1 {
+    color: var(--clr-gray);
+}
+
+.createBlogs .addBlogForm label {
+    font-size: 1em;
+    color: var(--clr-gray);
+    
+    margin-left: .5em;
+    margin-bottom: .5em;
+
+    visibility: hidden;
+}
+
+.createBlogs .addBlogForm label[class="animatedLabel"] {
+    animation: showLabelAnimation 1s;
+}
+
+.createBlogs .addBlogForm input[type="text"] {
+    width: 850px;
+
+    font-size: 1.15em;
+    color: var(--clr-gray);
+
+    padding: .5em .5em;
+
+    border: .15em solid var(--clr-dark-gray);
+    background-color: transparent;
+}
+
+.createBlogs .addBlogForm input[type="text"]:focus {
+    border-color: var(--clr-gray);
+
+    outline: none;
+}
+
+.createBlogs .addBlogForm textarea {
+    height: 360px;
+    width: 850px;
+    
+    font-size: 1.15em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--clr-gray);
+
+    line-height: 1.5em;
+
+    padding: .5em .5em;
+    
+    border: .15em solid var(--clr-dark-gray);
+    background-color: transparent;
+
+    resize: none;
+}
+
+.createBlogs .addBlogForm textarea:focus {
+    border-color: var(--clr-gray);
+
+    outline: none;
+}
+
+.createBlogs .addBlogForm textarea::-webkit-scrollbar {
+    width: .6em;
+}
+
+.createBlogs .addBlogForm textarea::-webkit-scrollbar-track {
+    background-color: var(--clr-dark-gray);
+}
+
+.createBlogs .addBlogForm textarea::-webkit-scrollbar-thumb {
+    background-color: var(--clr-gray);
+}
+
+.createBlogs .addBlogForm p {
+    width: 865px;
+
+    font-size: 0.8em;
+    color: var(--clr-dark-gray);
+
+    text-align: right;
+}
+
+.createBlogs .submitButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+
+    margin-top: 1em;
+}
+
+.createBlogs .submitButton button {
+    height: 50px;
+    width: 100px;
+
+    font-size: 1.35em;
+
+    margin-top: 3em;
+
+    color: var(--clr-gray);
+    background-color: transparent;
+
+    border: .12em solid var(--clr-gray);
+}
+
+.createBlogs .submitButton button:hover {
+    cursor: pointer;
+}
+
+.blogNameContainer,
+.blogDescriptionContainer,
+.blogPhotoContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.createBlogs .blogNameContainer .blogNameParagraphsContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.createBlogs .blogNameContainer .blogNameParagraphsContainer p[id="blogNameErrorParagraph"] {
+    font-weight: 700;
+    color: rgb(125, 0, 0);
+
+    margin-left: 0.5em;
+    text-align: left;
+
+    visibility: hidden;
+}
+
+.createBlogs .blogPhotoContainer {
+    justify-content: center;
+    align-items: center;
+    
+    gap: 2em;
+}
+
+.createBlogs .blogPhotoContainer img {
+    min-height: 450px;
+    max-height: 575px;
+
+    min-width: 350px;
+    max-width: 700px;
+
+    filter: brightness(0.25);
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.createBlogs .blogPhotoContainer img.animatedPhoto {
+    animation: heartBeatPhotoAnimation .5s;
+}
+
+.createBlogs .blogPhotoContainer img.restartAnimation {
+    animation: none;
+}
+
+.createBlogs .blogPhotoContainer button {
+    height: 40px;
+    width: 80px;
+
+    font-size: 1.15em;
+
+    color: var(--clr-gray);
+    background-color: transparent;
+
+    border: .12em solid var(--clr-gray);
+}
+
+.createBlogs .blogPhotoContainer button:hover {
+    cursor: pointer;
+}
+
+.createBlogs .blogPhotoContainer .blogPhotoButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2em;
+}
+
+@keyframes showLabelAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes heartBeatPhotoAnimation {
+    0%, 50%, 100% {
+        scale: 1;
+    }
+
+    25%, 75% {
+        scale: 1.05;
+    }
+}

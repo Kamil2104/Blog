@@ -8,7 +8,7 @@ import NotLoggedIn from './components/error/NotLoggedIn'
 
 import axios from 'axios'
 
-import './assets/AdminPanel.css'
+import './assets/styles/AdminPanel.css'
 
 const AdminPanel = () => {
   const [actualPanel, setActualPanel] = useState("Create")

@@ -31,11 +31,20 @@ const Header = ({ setActualPanel }) => {
   return (
     <header>
         <menu>
-            <a onClick={handleCreateBlog}> Create a blog </a>
-            <a onClick={handleManageBlogs}> Manage blogs </a>
+            <a 
+                className='createBlogsLink'
+                onClick={handleCreateBlog}
+            > Create a blog </a>
+            <a 
+                className='manageBlogsLink'
+                onClick={handleManageBlogs}
+            > Manage blogs </a>
         </menu>
         <aside>
-            <a onClick={handleLogOut}> Log out </a>
+            <a 
+                className='logOutLink'
+                onClick={handleLogOut}
+            > Log out </a>
         </aside>
     </header>
   )

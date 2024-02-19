@@ -1,17 +1,17 @@
 :root {
-    --clr-black: rgb(22, 22, 22);
+    --clr-black: rgb(15, 15, 15);
     --clr-light-black: rgb(16, 16, 16);
     --clr-gray: rgb(145, 145, 145);
     --clr-light-gray: rgb(181, 181, 181);
     --clr-dark-gray: rgb(97, 97, 97);
 }
 
-.adminPanel header {
+header {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 3em;
 
-    height: 100px;
+    min-height: 100px;
     width: 100%;
 
     color: var(--clr-gray);
@@ -39,8 +39,6 @@ menu {
     align-items: center;
     gap: 3em;
 
-    height: 100%;
-
     margin: 0;
     padding: 0em 4em;
 }
@@ -53,10 +51,52 @@ aside {
     justify-content: end;
     align-items: center;
 
-    height: 100%;
-
     margin: 0;
     padding: 0em 4em;
 
     flex: 1;
+}
+
+@media screen and (max-width: 730px) {
+    header {
+        flex-direction: column;
+        gap: 0;
+
+        min-height: auto;
+
+        border-bottom: .08em solid var(--clr-dark-gray);
+
+        -webkit-box-shadow: 0px 12px 10px -2px var(--clr-black);
+        -moz-box-shadow: 0px 12px 10px -2px var(--clr-black);
+        box-shadow: 0px 12px 10px -2px var(--clr-black);
+    }
+
+    header a {
+        width: 100%;
+        
+        padding: 1em;
+
+        text-align: center;
+
+        border-top: .05em solid var(--clr-dark-gray);
+    }
+
+    header a.createBlogsLink {
+        border-top: none;
+    }
+
+    menu {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+
+        padding: 0;
+    }
+
+    aside {
+        justify-content: center;
+        width: 100%;
+
+        padding: 0;
+    }
 }

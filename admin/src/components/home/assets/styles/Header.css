@@ -33,7 +33,7 @@
 
 /* MENU */
 
-menu {
+.adminPanel header menu {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -45,7 +45,7 @@ menu {
 
 /* ASIDE */
 
-aside {
+.adminPanel header aside {
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -74,7 +74,9 @@ aside {
     .adminPanel header a {
         width: 100%;
         
-        padding: 1em;
+        font-size: 1em;
+
+        padding: 1em 0em;
 
         text-align: center;
 
@@ -85,7 +87,7 @@ aside {
         border-top: none;
     }
 
-    menu {
+    .adminPanel header menu {
         flex-direction: column;
         gap: 0;
         width: 100%;
@@ -93,7 +95,7 @@ aside {
         padding: 0;
     }
 
-    aside {
+    .adminPanel header aside {
         justify-content: center;
         width: 100%;
 

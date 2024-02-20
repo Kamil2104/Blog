@@ -25,7 +25,6 @@ class Authentication {
                     }
     
                     if (data.length > 0) {
-                        // return res.json("Success")
                         blogdb.query(setLoggedQuery, (err, data) => {
                             if (err) {
                                 return res.json("Error")

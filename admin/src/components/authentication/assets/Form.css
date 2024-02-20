@@ -1,5 +1,5 @@
 :root {
-    --clr-black: rgb(22, 22, 22);
+    --clr-form-black: rgb(22, 22, 22);
     --clr-light-black: rgb(16, 16, 16);
     --clr-gray: rgb(145, 145, 145);
     --clr-dark-gray: rgb(97, 97, 97);
@@ -21,7 +21,7 @@
     height: 600px;
     width: 450px;
 
-    background-color: var(--clr-black);
+    background-color: var(--clr-form-black);
     border-radius: 2em;
     box-shadow: 0em -1em 1em var(--clr-light-black),
                 0em 1em 1em var(--clr-light-black),

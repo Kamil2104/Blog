@@ -99,90 +99,94 @@ const Form = () => {
   return (
     <>
         <div className="addBlogForm">
-            <section className="leftPanel">
-                <h1> Add new blog </h1>
-                <section className="blogNameContainer">
-                    <label 
-                        htmlFor="blogName"
-                        id="labelName"
-                    > Name: </label>
-                    <input 
-                        type="text"
-                        id="blogName"
-                        placeholder="Name:"
-                        autoComplete="off"
-                        maxLength={100}
-                        ref={blogNameRef}
-                        onChange={() => {
-                            handleChangesOnInputFields("blogName", "labelName", "blogNameErrorParagraph");
-                            handleNameFieldLength();
-                            setDefaultBorder(blogNameRef.current.id);}
-                        }
-                    />
-                    <section className="blogNameParagraphsContainer">
+            <section className="upperPanel">
+                <section className="leftPanel">
+                    <h1> Add new blog </h1>
+                    <section className="blogNameContainer">
+                        <label 
+                            htmlFor="blogName"
+                            id="labelName"
+                        > Name: </label>
+                        <input 
+                            type="text"
+                            id="blogName"
+                            placeholder="Name:"
+                            autoComplete="off"
+                            maxLength={100}
+                            ref={blogNameRef}
+                            onChange={() => {
+                                handleChangesOnInputFields("blogName", "labelName", "blogNameErrorParagraph");
+                                handleNameFieldLength();
+                                setDefaultBorder(blogNameRef.current.id);}
+                            }
+                        />
+                        <section className="blogNameParagraphsContainer">
+                            <p
+                            id="blogNameErrorParagraph"      
+                            > Blog with this name already exists </p>
+                            <p
+                                id="paragraphNameLength"
+                            > {nameLength} / 100 </p>
+                        </section>
+                    </section>
+                    <section className="blogDescriptionContainer">
+                        <label 
+                            htmlFor="blogDescription"
+                            id="labelDescription"
+                        > Description: </label>
+                        <textarea 
+                            id="blogDescription" 
+                            placeholder="Description:"
+                            maxLength={1000}
+                            ref={blogDescriptionRef}
+                            onChange={() => {
+                                handleChangesOnInputFields("blogDescription", "labelDescription");
+                                handleDescriptionFieldLength();
+                                setDefaultBorder(blogDescriptionRef.current.id)}
+                            }
+                        />
                         <p
-                        id="blogNameErrorParagraph"      
-                        > Blog with this name already exists </p>
-                        <p
-                            id="paragraphNameLength"
-                        > {nameLength} / 100 </p>
+                            id="paragraphDescriptionLength"
+                        > {descriptionLength} / 1000 </p>
                     </section>
                 </section>
-                <section className="blogDescriptionContainer">
-                    <label 
-                        htmlFor="blogDescription"
-                        id="labelDescription"
-                    > Description: </label>
-                    <textarea 
-                        id="blogDescription" 
-                        placeholder="Description:"
-                        maxLength={1000}
-                        ref={blogDescriptionRef}
-                        onChange={() => {
-                            handleChangesOnInputFields("blogDescription", "labelDescription");
-                            handleDescriptionFieldLength();
-                            setDefaultBorder(blogDescriptionRef.current.id)}
-                        }
-                    />
-                    <p
-                        id="paragraphDescriptionLength"
-                    > {descriptionLength} / 1000 </p>
-                </section>
-            </section>
-            <section className="rightPanel">
-                <section className="blogPhotoContainer">
-                    <img 
-                        id="blogPhoto"
-                        alt="No image available" 
-                        src={isPhotoSelected ? URL.createObjectURL(selectedBlogPhoto): noImageAvailable} 
-                    />
-                    <section className="blogPhotoButtons">
-                        <button 
-                            type="button"
-                            id="blogPhotoButtonChoose"
-                            ref={blogPhotoButtonChooseRef}
-                            onClick={handleBlogPhotoButtonClick}
-                        > Choose </button>
-                        <button 
-                            onClick={handleDeletingBlogPhoto}
-                        > Delete </button>
+                <section className="rightPanel">
+                    <section className="blogPhotoContainer">
+                        <img 
+                            id="blogPhoto"
+                            alt="No image available" 
+                            src={isPhotoSelected ? URL.createObjectURL(selectedBlogPhoto): noImageAvailable} 
+                        />
+                        <section className="blogPhotoButtons">
+                            <button 
+                                type="button"
+                                id="blogPhotoButtonChoose"
+                                ref={blogPhotoButtonChooseRef}
+                                onClick={handleBlogPhotoButtonClick}
+                            > Choose </button>
+                            <button 
+                                onClick={handleDeletingBlogPhoto}
+                            > Delete </button>
+                        </section>
+                        <input 
+                            type="file" 
+                            id="blogPhoto"
+                            accept="image/png, image/jpg, image/jpeg"
+                            style={{ display: "none" }}
+                            ref={blogPhotoRef}
+                            onChange={handleDisplayingBlogPhoto}
+                        />
                     </section>
-                    <input 
-                        type="file" 
-                        id="blogPhoto"
-                        accept="image/png, image/jpg, image/jpeg"
-                        style={{ display: "none" }}
-                        ref={blogPhotoRef}
-                        onChange={handleDisplayingBlogPhoto}
-                    />
                 </section>
             </section>
-        </div>
-        <div className="submitButton">
-            <button
-                id="buttonSubmit"
-                onClick={handleAddingBlog}
-            > Add </button>
+            <section className="lowerPanel">
+                <section className="submitButton">
+                    <button
+                        id="buttonSubmit"
+                        onClick={handleAddingBlog}
+                    > Add </button>
+                </section>
+            </section>
         </div>
     </>
   )

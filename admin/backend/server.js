@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const storage = multer.memoryStorage(); // Przechowuje plik w pamięci (buffer)
+const storage = multer.memoryStorage(); // Stores the file in memory (buffer)
 const upload = multer({ storage: storage });
 
 app.listen(PORT, () => {

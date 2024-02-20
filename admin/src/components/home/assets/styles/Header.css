@@ -6,7 +6,7 @@
     --clr-dark-gray: rgb(97, 97, 97);
 }
 
-header {
+.adminPanel header {
     display: flex;
     align-items: center;
     gap: 3em;
@@ -18,13 +18,13 @@ header {
     background-color: var(--clr-light-black);
 }
 
-header a {
+.adminPanel header a {
     font-size: 1.5em;
 
     margin: 0;
 }
 
-header a:hover {
+.adminPanel header a:hover {
     color: var(--clr-light-gray);
 
     cursor: pointer;
@@ -58,7 +58,7 @@ aside {
 }
 
 @media screen and (max-width: 730px) {
-    header {
+    .adminPanel header {
         flex-direction: column;
         gap: 0;
 
@@ -71,7 +71,7 @@ aside {
         box-shadow: 0px 12px 10px -2px var(--clr-black);
     }
 
-    header a {
+    .adminPanel header a {
         width: 100%;
         
         padding: 1em;
@@ -81,7 +81,7 @@ aside {
         border-top: .05em solid var(--clr-dark-gray);
     }
 
-    header a.createBlogsLink {
+    .adminPanel header a.createBlogsLink {
         border-top: none;
     }
 

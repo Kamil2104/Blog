@@ -1,0 +1,13 @@
+.noBlogsAvailable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 750px;
+    width: 100%;
+}
+
+.noBlogsAvailable p {
+    font-size: 2rem;
+    color: rgb(90, 90, 90);
+}

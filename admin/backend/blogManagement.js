@@ -38,9 +38,11 @@ class BlogManagement {
                 console.log(err)
             } 
 
-            if (data.length > 0) {
+            if (data.length === 0) {
+                return res.json("No blogs available")
+            } else  if (data.length > 0) {
                 return res.json(data)
-            } else {
+            } else{
                 return res.json("Error")
             }
         })

@@ -32,3 +32,4 @@ router.post('/loggedIn', authentication.loggedIn);
 
 // 2. Blog management:
 router.post('/addBlog', upload.single('photo'), blogManagement.addBlog);
+router.post('/displayBlogs', blogManagement.displayBlogs);

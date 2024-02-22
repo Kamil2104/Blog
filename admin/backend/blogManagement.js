@@ -29,6 +29,22 @@ class BlogManagement {
             });
         });
     }
+
+    displayBlogs(req, res) {
+        const query = "SELECT * FROM blogs"
+
+        blogdb.query(query, (err, data) => {
+            if (err) {
+                console.log(err)
+            } 
+
+            if (data.length > 0) {
+                return res.json(data)
+            } else {
+                return res.json("Error")
+            }
+        })
+    }
 }
 
 module.exports = new BlogManagement();

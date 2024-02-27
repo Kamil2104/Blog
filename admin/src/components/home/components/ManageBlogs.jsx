@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 
+import BlogsDisplay from './BlogsDisplay'
 import NoBlogsAvailable from './error/NoBlogsAvailable'
 
 import axios from 'axios'
@@ -18,7 +19,6 @@ const ManageBlogs = () => {
             setIsBlog(false)
         } else {
             setIsBlog(true)
-            console.log(res.data)
         }
       })
       .catch((err) => console.log(err))
@@ -27,7 +27,7 @@ const ManageBlogs = () => {
     return (
       <div className="manageBlogs">
           {isBlog === true ? (
-            <p> Display blogs </p>
+            <BlogsDisplay/>
           ) : isBlog === false ? (
             <NoBlogsAvailable />
           ) : (

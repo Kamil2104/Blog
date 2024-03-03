@@ -85,7 +85,7 @@ const Form = () => {
             axios.post('http://localhost:3001/addBlog', values)
             .then(res => {
                 if (res.data === "Success") {
-                    navigate('/successAnimation')
+                    navigate('/createBlogSuccessAnimation')
                 } else if (res.data === "Error (name)") {
                     showBlogNameErrorParagraph("blogNameErrorParagraph")
                 } else {

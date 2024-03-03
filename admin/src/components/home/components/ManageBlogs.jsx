@@ -9,6 +9,7 @@ import '../assets/styles/ManageBlogs.css'
 
 const ManageBlogs = () => {
     const [isBlog, setIsBlog] = useState(undefined)
+    const [blogs, setBlogs] = useState([])
 
     useEffect(() => {
       axios.post('http://localhost:3001/displayBlogsNames')
@@ -19,6 +20,9 @@ const ManageBlogs = () => {
             setIsBlog(false)
         } else {
             setIsBlog(true)
+
+            const blogNames = Object.values(res.data);
+            setBlogs(blogNames);
         }
       })
       .catch((err) => console.log(err))
@@ -27,7 +31,7 @@ const ManageBlogs = () => {
     return (
       <div className="manageBlogs">
           {isBlog === true ? (
-            <BlogsDisplay/>
+            <BlogsDisplay blogs={blogs} />
           ) : isBlog === false ? (
             <NoBlogsAvailable />
           ) : (

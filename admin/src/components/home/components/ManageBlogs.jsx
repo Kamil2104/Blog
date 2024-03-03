@@ -11,7 +11,7 @@ const ManageBlogs = () => {
     const [isBlog, setIsBlog] = useState(undefined)
 
     useEffect(() => {
-      axios.post('http://localhost:3001/displayBlogs')
+      axios.post('http://localhost:3001/displayBlogsNames')
       .then(res => {1
         if (res.data === "Error") {
             alert("Something went wrong with our servers. Try again later.")

@@ -24,12 +24,6 @@ const BlogsDisplay = () => {
             />
           </section>
         </section>
-        <section className='blog'>
-
-        </section>
-        <section className='blog'>
-
-        </section>
     </div>
   )
 }

@@ -30,8 +30,8 @@ class BlogManagement {
         });
     }
 
-    displayBlogs(req, res) {
-        const query = "SELECT * FROM blogs"
+    displayBlogsNames(req, res) {
+        const query = "SELECT name FROM blogs"
 
         blogdb.query(query, (err, data) => {
             if (err) {

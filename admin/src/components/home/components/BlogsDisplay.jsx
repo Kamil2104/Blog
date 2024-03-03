@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrashCan } from '@fortawesome/free-regular-svg-icons'
 
@@ -7,6 +9,8 @@ import '../assets/styles/BlogsDisplay.css'
 
 const BlogsDisplay = (blogs) => {
 
+  const navigate = useNavigate()
+
   const deleteBlogHandler = (blogName) => {
     const values = {
       name: blogName
@@ -15,7 +19,7 @@ const BlogsDisplay = (blogs) => {
     axios.post("http://localhost:3001/deleteBlog", values)
     .then(res => {
         if (res.data === "Success") {
-          window.location.reload()
+          navigate('/deleteBlogSuccessAnimation')
         } else {
           alert("Something went wrong with our servers. Try again later.")
         }

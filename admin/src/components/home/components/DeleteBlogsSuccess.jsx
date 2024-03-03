@@ -6,13 +6,13 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
 import '../assets/styles/Success.css'
 
-const Success = () => {
+const DeleteBlogSuccess = () => {
   const navigate = useNavigate()
   
   useEffect(() => {
     setTimeout(() => {
       navigate('/adminPanel')
-    }, 9000)
+    }, 7500)
   })
 
   return (
@@ -24,10 +24,10 @@ const Success = () => {
             />
         </div>
         <div className='successAnimationParagraph'>
-            <p> Blog has been successfully added! </p>
+            <p> Blog has been successfully deleted! </p>
         </div>
     </div>
   )
 }
 
-export default Success
+export default DeleteBlogSuccess

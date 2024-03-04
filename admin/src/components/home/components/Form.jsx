@@ -5,6 +5,7 @@ import { handleChangesOnInputFields } from "../functions/inputFieldsHandler"
 import { setDefaultBorder } from "../functions/setDefaultBorderColorHandler"
 import { isBlogReadyToBeAdded } from "../validation/isReadyForPosting"
 import { showBlogNameErrorParagraph } from "../functions/blogNameErrorParagraphHandler"
+import { getDate } from "../functions/getDateHandler"
 
 import noImageAvailable from '../assets/NoImageAvailable.png'
 
@@ -80,7 +81,8 @@ const Form = () => {
             const values = new FormData();
             values.append('description', blogDescriptionRef.current.value);
             values.append('photo', selectedBlogPhoto);
-            values.append('name', blogNameRef.current.value);
+            values.append('date', getDate());
+            values.append('name', blogNameRef.current.value)
 
             axios.post('http://localhost:3001/addBlog', values)
             .then(res => {

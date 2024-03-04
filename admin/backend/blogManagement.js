@@ -15,8 +15,8 @@ class BlogManagement {
             }
 
             // We use req.file.buffer because the file is sent as a 'file' object (using multer)
-            const blogQuery = "UPDATE blogs SET `description` = ?, `photo` = ? WHERE `name` = ?"
-            const valuesForBlogQuery = [req.body.description, req.file.buffer, req.body.name]
+            const blogQuery = "UPDATE blogs SET `description` = ?, `photo` = ?, `date` = ? WHERE `name` = ?"
+            const valuesForBlogQuery = [req.body.description, req.file.buffer, req.body.date, req.body.name]
 
             blogdb.query(blogQuery, valuesForBlogQuery, (err, data) => {
                 if (err) {
@@ -33,7 +33,7 @@ class BlogManagement {
     }
 
     displayBlogsNames(req, res) {
-        const query = "SELECT name FROM blogs"
+        const query = "SELECT name FROM blogs ORDER BY date DESC"
 
         blogdb.query(query, (err, data) => {
             if (err) {

@@ -1,11 +1,11 @@
-import Form from './Form'
+import CreateBlogForm from './CreateBlogForm.jsx'
 
 import '../assets/styles/CreateBlogs.css'
 
 const CreateBlogs = () => {
   return (
     <div className="createBlogs">
-        <Form />
+        <CreateBlogForm />
     </div>
   )
 }

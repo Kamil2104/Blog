@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrashCan } from '@fortawesome/free-regular-svg-icons'
 
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 import axios from 'axios'
 
@@ -62,7 +62,8 @@ const BlogsDisplay = ({blogs, setDisplayOrEdit, setEditedBlogName}) => {
 
 BlogsDisplay.propTypes = {
   blogs: PropTypes.array.isRequired,
-  setDisplayOrEdit: PropTypes.func.isRequired
+  setDisplayOrEdit: PropTypes.func.isRequired,
+  setEditedBlogName: PropTypes.func.isRequired
 };
 
 export default BlogsDisplay

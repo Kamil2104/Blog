@@ -68,6 +68,25 @@ class BlogManagement {
             }
         })
     }
+
+    displayBlogToEdit(req, res) {
+        const query = "SELECT name, description, photo FROM blogs WHERE `name` = ?" 
+        const values = [
+            req.body.name
+        ]
+
+        blogdb.query(query, values, (err, data) => {
+            if (err) {
+                console.log(err)
+            }
+
+            if (data.length > 0) {
+                return res.json(data)
+            } else {
+                return res.json("Error")
+            }
+        })
+    }
 }
 
 module.exports = new BlogManagement();

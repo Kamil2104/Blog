@@ -1,13 +1,11 @@
-import { useEffect } from "react"
+import EditBlogForm from "./EditBlogForm"
+
+import '../assets/styles/EditBlogs.css'
 
 const EditBlog = (editedBlogName) => {
-  useEffect(() => {
-    console.log(editedBlogName)
-  }, [editedBlogName])
-  
   return (
-    <div>
-        EditBlog
+    <div className="editBlogs">
+        <EditBlogForm editedBlogName={editedBlogName}/>
     </div>
   )
 }

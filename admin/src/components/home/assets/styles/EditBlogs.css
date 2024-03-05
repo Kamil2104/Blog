@@ -1,0 +1,420 @@
+::root {
+    --clr-border: rgb(64, 64, 64);
+}
+
+.editBlogs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    width: 100%;
+}
+
+.editBlogs .editBlogForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.editBlogs .editBlogForm .upperPanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: left;
+
+    width: 100%;
+}
+
+.editBlogs .editBlogForm .lowerPanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: left;
+
+    width: 100%;
+}
+
+.editBlogs .editBlogForm .leftPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    gap: 1em;
+
+    width: 50%;
+
+    padding: 1em 3em;
+}
+
+.editBlogs .editBlogForm .rightPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    width: 50%;
+
+    padding-top: 3em;
+}
+
+.editBlogs .editBlogForm h1 {
+    color: var(--clr-gray);
+}
+
+.editBlogs .editBlogForm label {
+    font-size: 1em;
+    color: var(--clr-gray);
+    
+    margin-left: .5em;
+    margin-bottom: .5em;
+
+    visibility: hidden;
+}
+
+.editBlogs .editBlogForm label[id="labelName"] {
+    visibility: visible;
+}
+
+.editBlogs .editBlogForm label[class="animatedLabel"] {
+    animation: showLabelAnimation 1s;
+}
+
+.editBlogs .editBlogForm input[type="text"] {
+    width: 100%;
+
+    font-size: 1.15em;
+    color: var(--clr-gray);
+
+    padding: .5em .5em;
+
+    border: .15em solid var(--clr-dark-gray);
+    background-color: transparent;
+}
+
+.editBlogs .editBlogForm input[type="text"]:focus {
+    border-color: var(--clr-gray);
+
+    outline: none;
+}
+
+.editBlogs .editBlogForm textarea {
+    height: 335px;
+    width: 100%;
+    
+    font-size: 1.15em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--clr-gray);
+
+    line-height: 1.5em;
+
+    padding: .5em .5em;
+    
+    border: .15em solid var(--clr-dark-gray);
+    background-color: transparent;
+
+    resize: none;
+}
+
+.editBlogs .editBlogForm textarea:focus {
+    border-color: var(--clr-gray);
+
+    outline: none;
+}
+
+.editBlogs .editBlogForm textarea::-webkit-scrollbar {
+    width: .6em;
+}
+
+.editBlogs .editBlogForm textarea::-webkit-scrollbar-track {
+    background-color: var(--clr-dark-gray);
+}
+
+.editBlogs .editBlogForm textarea::-webkit-scrollbar-thumb {
+    background-color: var(--clr-gray);
+}
+
+.editBlogs .editBlogForm p {
+    width: 100%;
+
+    font-size: 0.8em;
+    color: var(--clr-dark-gray);
+
+    text-align: right;
+}
+
+.blogNameContainer,
+.blogDescriptionContainer,
+.blogPhotoContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.blogNameContainer {
+    margin-bottom: 1.5em;
+}
+
+.editBlogs .blogPhotoContainer {
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    
+    margin-top: 3.5em;
+
+    width: 100%;
+}
+
+.editBlogs .blogPhotoContainer img {
+    min-height: 350px;
+    max-height: 500px;
+
+    min-width: 40%;
+    max-width: 70%;
+
+    filter: brightness(0.25);
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.editBlogs .blogPhotoContainer img.animatedPhoto {
+    animation: heartBeatPhotoAnimation .5s;
+}
+
+.editBlogs .blogPhotoContainer img.restartAnimation {
+    animation: none;
+}
+
+.editBlogs .blogPhotoContainer button {
+    height: 40px;
+    width: 80px;
+
+    font-size: 1.15em;
+
+    color: var(--clr-gray);
+    background-color: transparent;
+
+    border: .12em solid var(--clr-gray);
+}
+
+.editBlogs .blogPhotoContainer button:hover {
+    cursor: pointer;
+}
+
+.editBlogs .blogPhotoContainer .blogPhotoButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2em;
+}
+
+.editBlogs .submitButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+
+    margin-top: 4em;
+}
+
+.editBlogs .submitButton button {
+    height: 50px;
+    width: 100px;
+
+    font-size: 1.35em;
+
+    margin-bottom: 2em;
+
+    color: var(--clr-gray);
+    background-color: transparent;
+
+    border: .12em solid var(--clr-gray);
+}
+
+.editBlogs .submitButton button:hover {
+    cursor: pointer;
+}
+
+@keyframes showLabelAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes heartBeatPhotoAnimation {
+    0%, 50%, 100% {
+        scale: 1;
+    }
+
+    25%, 75% {
+        scale: 1.05;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .editBlogs .blogPhotoContainer img {
+        min-width: 400px;
+        max-width: 800px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .editBlogs .blogPhotoContainer img {
+        min-height: 225px;
+        max-height: 425px;
+
+        min-width: 200px;
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .editBlogs .blogPhotoContainer img {
+        min-height: 220px;
+        max-height: 275px;
+
+        min-width: 200px;
+        max-width: 325px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .editBlogs .editBlogForm h1 {
+        font-size: 1.75em;
+    }
+
+    .editBlogs .editBlogForm .upperPanel {
+        flex-direction: column;
+
+        padding-top: 2em;
+    }
+
+    .editBlogs .editBlogForm .upperPanel .leftPanel {
+        padding: 0;
+    }
+
+    .editBlogs .editBlogForm .upperPanel .leftPanel,
+    .editBlogs .editBlogForm .upperPanel .rightPanel,
+    .editBlogs .editBlogForm .upperPanel .blogNameContainer,
+    .editBlogs .editBlogForm .upperPanel .blogDescriptionContainer {
+        width: 100%;
+    }
+
+    .editBlogs .editBlogForm .upperPanel .blogNameContainer,
+    .editBlogs .editBlogForm .upperPanel .blogDescriptionContainer {
+        align-items: center;
+    }
+
+    .editBlogs .editBlogForm .upperPanel .leftPanel {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .editBlogs .editBlogForm .upperPanel .leftPanel input,
+    .editBlogs .editBlogForm .upperPanel .leftPanel textarea,
+    .editBlogs .editBlogForm .upperPanel .leftPanel .blogDescriptionContainer p {
+        width: 90%;
+    }
+
+    .editBlogs .blogPhotoContainer {
+        margin-top: 1em;
+    }
+
+    .editBlogs .blogPhotoContainer button {
+        height: 30px;
+        width: 60px;
+        
+        font-size: .8em;
+    }
+
+    .editBlogs .submitButton {
+        margin-top: 2.5em;
+    }
+
+    .editBlogs .submitButton button {
+        height: 35px;
+        width: 70px;
+
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .editBlogs .blogPhotoContainer img {
+        min-width: 200px;
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .editBlogs .blogPhotoContainer img {
+        min-width: 200px;
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .editBlogs .editBlogForm h1 {
+        font-size: 1.2em;
+    }
+
+    .editBlogs .editBlogForm .upperPanel .blogDescriptionContainer {
+        font-size: .8em;
+    }
+
+    .editBlogs .blogPhotoContainer img {
+        min-height: 100px;
+        max-height: 200px;
+
+        min-width: 150px;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 265px) {
+    .editBlogs .editBlogForm h1 {
+        font-size: 1em;
+    }
+
+    .editBlogs .editBlogForm .upperPanel .leftPanel label {
+        font-size: .8em;
+    }
+
+    .editBlogs .editBlogForm .upperPanel .leftPanel input {
+        font-size: .9em;
+    }
+
+    .editBlogs .editBlogForm .upperPanel .blogDescriptionContainer p {
+        font-size: .5em;
+    }
+
+    .editBlogs .blogPhotoContainer button {
+        height: 20px;
+        width: 40px;
+        
+        font-size: .45em;
+    }
+
+    .editBlogs .submitButton {
+        margin-top: 1.5em;
+    }
+
+    .editBlogs .submitButton button {
+        height: 22.5px;
+        width: 40px;
+
+        font-size: .6em;
+    }
+}

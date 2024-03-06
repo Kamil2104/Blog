@@ -36,6 +36,7 @@
 }
 
 .adminPanel header a.active {
+    color: rgb(216, 216, 216);
     background-color: var(--clr-super-light-black);
 }
 

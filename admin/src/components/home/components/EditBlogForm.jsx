@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { useNavigate } from "react-router-dom"
 
 import { handleChangesOnInputFields } from "../functions/inputFieldsHandler"
 import { setDefaultBorder } from "../functions/setDefaultBorderColorHandler"
@@ -12,6 +13,8 @@ import PropTypes from 'prop-types'
 import axios from 'axios'
 
 const EditBlogForm = ({editedBlogName}) => {
+  const navigate = useNavigate()
+
   const [descriptionLength, setDescriptionLength] = useState(0)
 
   const [isPhotoSelected, setIsPhotoSelected] = useState(undefined)
@@ -111,7 +114,7 @@ const EditBlogForm = ({editedBlogName}) => {
             axios.post('http://localhost:3001/updateBlog', values)
             .then(res => {
               if (res.data === "Success") {
-                console.log("Success")
+                navigate('/editBlogSuccessAnimation')
               } else {
                 alert("Something went wrong with our servers. Try again later.")
               }

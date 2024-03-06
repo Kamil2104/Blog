@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 
+import { setCreateBlogsLinkBackgroundAsActive, setManageBlogsLinkBackgroundAsActive } from '../functions/headerBackgroundColorSwitchHandler'
+
 import axios from 'axios'
 
 import '../assets/styles/Header.css'
@@ -9,10 +11,14 @@ const Header = ({ setActualPanel }) => {
     const navigate = useNavigate()
 
     const handleCreateBlog = () => {
+        setCreateBlogsLinkBackgroundAsActive("createBlogsLinkId", "manageBlogsLinkId")
+
         setActualPanel("Create")
     }
 
     const handleManageBlogs = () => {
+        setManageBlogsLinkBackgroundAsActive("createBlogsLinkId", "manageBlogsLinkId")
+
         setActualPanel("Manage")
     }
 
@@ -32,11 +38,12 @@ const Header = ({ setActualPanel }) => {
     <header>
         <menu>
             <a 
-                className='createBlogsLink'
+                className='active'
+                id='createBlogsLinkId'
                 onClick={handleCreateBlog}
             > Create a blog </a>
             <a 
-                className='manageBlogsLink'
+                id='manageBlogsLinkId'
                 onClick={handleManageBlogs}
             > Manage blogs </a>
         </menu>

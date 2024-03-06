@@ -11,7 +11,7 @@ import noImageAvailable from '../assets/NoImageAvailable.png'
 
 import axios from "axios"
 
-const Form = () => {
+const CreateBlogForm = () => {
   const navigate = useNavigate()
 
   const [nameLength, setNameLength] = useState(0)
@@ -194,4 +194,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default CreateBlogForm

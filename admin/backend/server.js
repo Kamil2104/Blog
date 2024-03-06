@@ -34,3 +34,5 @@ router.post('/loggedIn', authentication.loggedIn);
 router.post('/addBlog', upload.single('photo'), blogManagement.addBlog);
 router.post('/displayBlogsNames', blogManagement.displayBlogsNames);
 router.post('/deleteBlog', blogManagement.deleteBlog);
+router.post('/displayBlogToEdit', blogManagement.displayBlogToEdit)
+router.post('/updateBlog', upload.single('photo'), blogManagement.updateBlog)

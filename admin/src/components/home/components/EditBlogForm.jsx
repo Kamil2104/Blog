@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from 'react'
 import { handleChangesOnInputFields } from "../functions/inputFieldsHandler"
 import { setDefaultBorder } from "../functions/setDefaultBorderColorHandler"
 import { isBlogReadyToBeAdded } from "../validation/isReadyForPosting"
-import { getDate } from "../functions/getDateHandler"
 
 import noImageAvailable from '../assets/NoImageAvailable.png'
 import uploadingImage from '../assets/UploadingImage.jpg'
@@ -102,13 +101,22 @@ const EditBlogForm = ({editedBlogName}) => {
         selectedBlogPhoto,
         blogPhotoButtonChooseRef.current.id)) 
         {
+            const file = new File([selectedBlogPhoto], 'blogPhoto.jpg', { type: 'image/jpeg' });
+
             const values = new FormData();
             values.append('description', blogDescriptionRef.current.value);
-            values.append('photo', selectedBlogPhoto);
-            values.append('date', getDate());
-            values.append('name', blogNameRef.current.value)
+            values.append('photo', file);
+            values.append('name', editBlogValues[0].name)
 
-            // TODO: AXIOS FOR UPDATING (before it checking if any file was changed - if no -> show message to admin)
+            axios.post('http://localhost:3001/updateBlog', values)
+            .then(res => {
+              if (res.data === "Success") {
+                console.log("Success")
+              } else {
+                alert("Something went wrong with our servers. Try again later.")
+              }
+            })
+            .catch(err => console.log(err))
     }
   }
 
@@ -116,7 +124,7 @@ const EditBlogForm = ({editedBlogName}) => {
     <div className='editBlogForm'>
         <section className="upperPanel">
             <section className="leftPanel">
-                <h1> Edit blog </h1>
+                <h1> Edit blog </h1>                
                 <section className="blogNameContainer">
                     <label 
                         htmlFor="blogName"

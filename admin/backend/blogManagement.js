@@ -87,6 +87,29 @@ class BlogManagement {
             }
         })
     }
+
+    updateBlog(req, res) {
+        const query = "UPDATE blogs SET `description` = ?, `photo` = ? WHERE `name` = ?"
+        const values = [
+            req.body.description,
+            req.file.buffer,
+            req.body.name
+        ]
+
+        console.log(values)
+
+        blogdb.query(query, values, (err, data) => {
+            if (err) {
+                console.log(err)
+            }
+
+            if (data.affectedRows > 0) {
+                return res.json("Success")
+            } else {
+                return res.json("Error")
+            }
+        })
+    }
 }
 
 module.exports = new BlogManagement();

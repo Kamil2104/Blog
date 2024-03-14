@@ -6,12 +6,12 @@ import './assets/Header.css'
 const Header = () => {
   return (
     <div className="header">
-        <aside>
+        <section className="photoContainer">
             <Photo />
-        </aside>
-        <main>
+        </section>
+        <section className="textContainer">
             <Text />
-        </main>
+        </section>
     </div>
   )
 }

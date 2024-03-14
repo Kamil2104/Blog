@@ -1,0 +1,33 @@
+:root {
+    --clr-bg: rgb(222, 222, 222);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 400px;
+    width: 100%;
+
+    background-color: var(--clr-bg)
+}
+
+.photoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 70%;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 30%;
+}

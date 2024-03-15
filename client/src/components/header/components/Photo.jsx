@@ -1,7 +1,9 @@
+import myPhoto from '../assets/noImageAvailable.png'
+
 const Photo = () => {
   return (
     <>
-        Photo
+        <img src={myPhoto} alt="My photo" />
     </>
   )
 }

@@ -1,5 +1,12 @@
 html, body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
+}
+
+:root {
+    --clr-home-bg: rgb(0, 2, 18);
+    --clr-header-bg: rgb(0, 3, 25);
+    --clr-font: rgb(146, 146, 146);
 }
 
 .home {
@@ -10,4 +17,6 @@ html, body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    background-color: var(--clr-home-bg);
 }

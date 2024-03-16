@@ -6,6 +6,7 @@ html, body {
 :root {
     --clr-home-bg: rgb(0, 2, 18);
     --clr-header-bg: rgb(0, 3, 25);
+    --clr-blogs-font: rgb(146, 146, 146);
     --clr-font: rgb(146, 146, 146);
 }
 

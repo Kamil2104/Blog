@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols:wght@100..900&display=swap');
+
 html, body {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Noto Sans Symbols", sans-serif;
     margin: 0;
 }
 
 :root {
-    --clr-home-bg: rgb(0, 2, 18);
-    --clr-header-bg: rgb(0, 3, 25);
-    --clr-blogs-font: rgb(146, 146, 146);
-    --clr-font: rgb(146, 146, 146);
+    --clr-home-bg: rgba(255, 255, 255);
+    --clr-header-bg: rgba(255, 255, 255);
+    --clr-blogs-font: rgba(255, 255, 255, 0.14);
+    --clr-font: rgb(0, 0, 0);
 }
 
 .home {

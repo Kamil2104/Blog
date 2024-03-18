@@ -19,7 +19,46 @@
     height: fit-content;
     width: 10%;
 
+    margin-left: 1em;
+
+    box-shadow: 0px 0px 20px 0px var(--clr-box-shadow);
     background-color: white;
+}
+
+.blogs nav .navigateToStart,
+.blogs nav .navigateToPinnedBlog,
+.blogs nav .navigateToDatabaseBlog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    font-size: 1.1em;
+
+    box-shadow: 0px 0px 6px 0px var(--clr-box-shadow);
+
+    transition: background-color .3s ease-in;
+    transform-origin: left;
+}
+
+.blogs nav .navigateToStart:hover,
+.blogs nav .navigateToPinnedBlog:hover,
+.blogs nav .navigateToDatabaseBlog:hover {
+    cursor: pointer;
+
+    background-color: var(--clr-box-shadow);
+}
+
+.blogs nav .navigateToStart,
+.blogs nav .navigateToPinnedBlog {
+    gap: 1em;
+}
+
+.blogs nav .navigateToStart .pinnedBlogIcon,
+.blogs nav .navigateToPinnedBlog .pinnedBlogIcon{
+    color: darkgray;
 }
 
 .blogs main {
@@ -32,7 +71,7 @@
 }
 
 .blogs main .pinnedBlog {
-    width: 60%;
+    width: 70%;
 }
 
 .blogs main .pinnedBlog .blog {

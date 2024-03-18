@@ -1,20 +1,41 @@
 .blogs {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 
     flex: 1;
     width: 100%;
 
-    padding-top: 6em;
+    padding: 3em 0em;
 }
 
-.blogs .pinnedBlog {
+.blogs nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: fit-content;
+    width: 10%;
+
+    background-color: white;
+}
+
+.blogs main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 90%;
+}
+
+.blogs main .pinnedBlog {
     width: 60%;
 }
 
-.blogs .pinnedBlog .blog {
+.blogs main .pinnedBlog .blog {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -24,13 +45,11 @@
     min-height: 350px;
     width: 100%;
 
-    margin-bottom: 4em;
-
     background-color: var(--clr-blogs-bg);
     box-shadow: 0px 0px 20px 0px var(--clr-box-shadow);
 }
 
-.blogs .pinnedBlog .blog header {
+.blogs main .pinnedBlog .blog header {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -42,14 +61,14 @@
     box-shadow: 0px 2px 12px 0px var(--clr-box-shadow)
 }
 
-.blogs .pinnedBlog .blog header .pinnedBlogName,
-.blogs .pinnedBlog .blog header .pinnedBlogIcon {
+.blogs main .pinnedBlog .blog header .pinnedBlogName,
+.blogs main .pinnedBlog .blog header .pinnedBlogIcon {
     height: 60px;
 
     padding: 1em 2em;
 }
 
-.blogs .pinnedBlog .blog header .pinnedBlogName {
+.blogs main .pinnedBlog .blog header .pinnedBlogName {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -58,13 +77,13 @@
     width: 80%;
 }
 
-.blogs .pinnedBlog .blog header .pinnedBlogName h1 {
+.blogs main .pinnedBlog .blog header .pinnedBlogName h1 {
     margin: 0;
     
     font-size: 2.5rem;
 }
 
-.blogs .pinnedBlog .blog header .pinnedBlogIcon {
+.blogs main .pinnedBlog .blog header .pinnedBlogIcon {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -73,13 +92,13 @@
     width: 20%;
 }
 
-.blogs .pinnedBlog .blog header .pinnedBlogIcon .pinIcon {
+.blogs main .pinnedBlog .blog header .pinnedBlogIcon .pinIcon {
     font-size: 2rem;
 
     color: darkgray;
 }
 
-.blogs .pinnedBlog .blog article {
+.blogs main .pinnedBlog .blog article {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -88,17 +107,17 @@
     gap: .5em;
 
     flex: 1;
-    width: 95%;
+    width: 90%;
 
     margin: 0em 2em 1.5em 2em;
 }
 
-.blogs .pinnedBlog .blog article p {
+.blogs main .pinnedBlog .blog article p {
     margin: 0;
 
     font-size: 1.25rem;
 }
 
-.blogs .pinnedBlog .blog article p.lastParagraph {
+.blogs main .pinnedBlog .blog article p.lastParagraph {
     padding-top: 2em;
 }

@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar"
 import PinnedBlog from "./components/PinnedBlogs"
 
 import './assets/Blogs.css'
@@ -5,9 +6,17 @@ import './assets/Blogs.css'
 const Blogs = () => {
     return (
         <section className="blogs">
-            <section className="pinnedBlog">
-                <PinnedBlog />
-            </section>
+            <nav>
+                <Navbar />   
+            </nav>
+            <main>
+                <section className="pinnedBlog">
+                    <PinnedBlog />
+                </section>
+                <section className="databaseBlogs">
+
+                </section>
+            </main>
         </section>
     )
 }

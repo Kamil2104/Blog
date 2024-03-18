@@ -5,7 +5,7 @@ const PinnedBlog = () => {
     return (
         <section className="blog">
             <header>
-                <section className="pinnedBlogName">
+                <section className="pinnedBlogName" id="pinnedBlogName">
                     <h1> About me </h1>
                 </section>
                 <section className="pinnedBlogIcon">

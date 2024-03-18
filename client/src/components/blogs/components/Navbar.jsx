@@ -1,17 +1,19 @@
+import { scrollToComponent } from "../functions/scrollToComponent"
+
 import { faHome, faMapPin } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Navbar = () => {
   return (
     <>
-        <section className="navigateToStart">
+        <section className="navigateToStart" onClick={() => scrollToComponent("header")}>
             <p> Start </p>
             <FontAwesomeIcon
                 icon={faHome}
                 className="pinnedBlogIcon"
             />
         </section>
-        <section className="navigateToPinnedBlog">
+        <section className="navigateToPinnedBlog" onClick={() => scrollToComponent("pinnedBlogName")}>
             <p> About me </p>
             <FontAwesomeIcon
                 icon={faMapPin}
@@ -19,19 +21,29 @@ const Navbar = () => {
             />
         </section>
         <section className="navigateToDatabaseBlog">
-            <p> First Blog </p>
+            <section className="firstBlog">
+                <p> First Blog </p>
+            </section>
         </section>
         <section className="navigateToDatabaseBlog">
-            <p> Second Blog </p>
+            <section className="secondBlog">
+                <p> Second Blog </p>
+            </section>
         </section>
         <section className="navigateToDatabaseBlog">
-            <p> Third Blog </p>
+            <section className="thirdBlog">
+                <p> Third Blog </p>
+            </section>
         </section>
         <section className="navigateToDatabaseBlog">
-            <p> Fourth Blog </p>
+            <section className="fourthBlog">
+                <p> Fourth Blog </p>
+            </section>
         </section>
         <section className="navigateToDatabaseBlog">
-            <p> Fifth Blog </p>
+            <section className="fifthBlog">
+                <p> Fifth Blog </p>
+            </section>
         </section>
     </>
   )

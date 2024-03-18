@@ -5,7 +5,7 @@ import './assets/Header.css'
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className="header" id="header">
         <section className="photoContainer">
             <Photo />
         </section>

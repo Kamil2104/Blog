@@ -14,7 +14,7 @@ const AdminPanel = () => {
   const [actualPanel, setActualPanel] = useState("Create")
   const [logged, setLogged] = useState(null)
 
-  axios.post('http://localhost:3001/loggedIn')
+  axios.post('http://localhost:3002/loggedIn')
   .then(res => {
     if (res.data === "Success") {
       setLogged(true)

@@ -1,15 +1,30 @@
-import PinnedBlog from "./components/PinnedBlogs"
+import Navbar from "./components/Navbar";
+import PinnedBlog from "./components/PinnedBlogs";
 
-import './assets/Blogs.css'
+import PropTypes from "prop-types"
 
-const Blogs = () => {
+import './assets/Blogs.css';
+
+const Blogs = ({ blogNames }) => {
     return (
         <section className="blogs">
-            <section className="pinnedBlog">
-                <PinnedBlog />
-            </section>
-        </section>
-    )
-}
+            <nav>
+                <Navbar blogNames={blogNames}/>   
+            </nav>
+            <main>
+                <section className="pinnedBlog">
+                    <PinnedBlog />
+                </section>
+                <section className="databaseBlogs">
+                    {/* Placeholder for database blogs */}
+                </section>
+            </main>
+         </section>
+    );
+};
 
-export default Blogs
+Blogs.propTypes = {
+    blogNames: PropTypes.array.isRequired
+};
+
+export default Blogs;

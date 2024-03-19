@@ -32,7 +32,7 @@ const EditBlogForm = ({editedBlogName}) => {
       name: Object.values(editedBlogName)
     }
 
-    axios.post('http://localhost:3001/displayBlogToEdit', values)
+    axios.post('http://localhost:3002/displayBlogToEdit', values)
     .then(res => {
       if (res.data === "Error") {
         alert("Something went wrong with our servers. Try again later.")
@@ -111,7 +111,7 @@ const EditBlogForm = ({editedBlogName}) => {
             values.append('photo', file);
             values.append('name', editBlogValues[0].name)
 
-            axios.post('http://localhost:3001/updateBlog', values)
+            axios.post('http://localhost:3002/updateBlog', values)
             .then(res => {
               if (res.data === "Success") {
                 navigate('/editBlogSuccessAnimation')

@@ -1,36 +1,117 @@
 .blogs {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 
     flex: 1;
     width: 100%;
 
-    padding-top: 6em;
+    padding: 3em 0em;
 }
 
-.blogs .pinnedBlog {
-    width: 60%;
+.blogs nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: fit-content;
+    width: 15%;
+
+    margin-left: 1em;
+    padding: 1em;
+
+    box-shadow: 0px 0px 20px 0px var(--clr-box-shadow);
+    background-color: white;
 }
 
-.blogs .pinnedBlog .blog {
+.blogs nav .navigateToStart,
+.blogs nav .navigateToPinnedBlog,
+.blogs nav .navigateToDatabaseBlog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    font-size: 1.1em;
+    line-height: 1.5em;
+
+    box-shadow: 0px 0px 6px 0px var(--clr-box-shadow);
+
+    transition: background-color .3s ease-in;
+    transform-origin: left;
+}
+
+.blogs nav .navigateToStart p,
+.blogs nav .navigateToPinnedBlog p {
+    padding-left: 1em;
+}
+
+.blogs nav .navigateToDatabaseBlog p {
+    padding: 0em 1em;
+}
+
+.blogs nav .navigateToStart .pinnedBlogIcon,
+.blogs nav .navigateToPinnedBlog .pinnedBlogIcon {
+    padding-right: 1em;
+}
+
+.blogs nav .navigateToDatabaseBlog > * {
+    height: 100%;
+    width: 100%;
+
+    text-align: center;
+}
+
+.blogs nav .navigateToStart:hover,
+.blogs nav .navigateToPinnedBlog:hover,
+.blogs nav .navigateToDatabaseBlog:hover {
+    cursor: pointer;
+
+    background-color: var(--clr-box-shadow);
+}
+
+.blogs nav .navigateToStart,
+.blogs nav .navigateToPinnedBlog {
+    gap: 1em;
+}
+
+.blogs nav .navigateToStart .pinnedBlogIcon,
+.blogs nav .navigateToPinnedBlog .pinnedBlogIcon{
+    color: darkgray;
+}
+
+.blogs main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 85%;
+}
+
+.blogs main .pinnedBlog {
+    width: 70%;
+}
+
+.blogs main .pinnedBlog .blog {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 2em;
 
-    min-height: 350px;
+    min-height: 1350px;
     width: 100%;
-
-    margin-bottom: 4em;
 
     background-color: var(--clr-blogs-bg);
     box-shadow: 0px 0px 20px 0px var(--clr-box-shadow);
 }
 
-.blogs .pinnedBlog .blog header {
+.blogs main .pinnedBlog .blog header {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -42,14 +123,14 @@
     box-shadow: 0px 2px 12px 0px var(--clr-box-shadow)
 }
 
-.blogs .pinnedBlog .blog header .pinnedBlogName,
-.blogs .pinnedBlog .blog header .pinnedBlogIcon {
+.blogs main .pinnedBlog .blog header .pinnedBlogName,
+.blogs main .pinnedBlog .blog header .pinnedBlogIcon {
     height: 60px;
 
     padding: 1em 2em;
 }
 
-.blogs .pinnedBlog .blog header .pinnedBlogName {
+.blogs main .pinnedBlog .blog header .pinnedBlogName {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -58,13 +139,13 @@
     width: 80%;
 }
 
-.blogs .pinnedBlog .blog header .pinnedBlogName h1 {
+.blogs main .pinnedBlog .blog header .pinnedBlogName h1 {
     margin: 0;
     
     font-size: 2.5rem;
 }
 
-.blogs .pinnedBlog .blog header .pinnedBlogIcon {
+.blogs main .pinnedBlog .blog header .pinnedBlogIcon {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -73,13 +154,13 @@
     width: 20%;
 }
 
-.blogs .pinnedBlog .blog header .pinnedBlogIcon .pinIcon {
+.blogs main .pinnedBlog .blog header .pinnedBlogIcon .pinIcon {
     font-size: 2rem;
 
     color: darkgray;
 }
 
-.blogs .pinnedBlog .blog article {
+.blogs main .pinnedBlog .blog article {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -88,17 +169,17 @@
     gap: .5em;
 
     flex: 1;
-    width: 95%;
+    width: 90%;
 
     margin: 0em 2em 1.5em 2em;
 }
 
-.blogs .pinnedBlog .blog article p {
+.blogs main .pinnedBlog .blog article p {
     margin: 0;
 
     font-size: 1.25rem;
 }
 
-.blogs .pinnedBlog .blog article p.lastParagraph {
+.blogs main .pinnedBlog .blog article p.lastParagraph {
     padding-top: 2em;
 }

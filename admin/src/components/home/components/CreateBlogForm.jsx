@@ -84,7 +84,7 @@ const CreateBlogForm = () => {
             values.append('date', getDate());
             values.append('name', blogNameRef.current.value)
 
-            axios.post('http://localhost:3001/addBlog', values)
+            axios.post('http://localhost:3002/addBlog', values)
             .then(res => {
                 if (res.data === "Success") {
                     navigate('/createBlogSuccessAnimation')

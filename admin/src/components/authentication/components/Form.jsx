@@ -104,7 +104,7 @@ const Form = () => {
             password: passwordValue
         }
         
-        axios.post('http://localhost:3001/login', values)
+        axios.post('http://localhost:3002/login', values)
             .then(res => {
                 if (res.data === "Success") {
                     setIsLogged(true)

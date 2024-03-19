@@ -17,9 +17,10 @@
     align-items: center;
 
     height: fit-content;
-    width: 10%;
+    width: 15%;
 
     margin-left: 1em;
+    padding: 1em;
 
     box-shadow: 0px 0px 20px 0px var(--clr-box-shadow);
     background-color: white;
@@ -36,11 +37,26 @@
     width: 100%;
 
     font-size: 1.1em;
+    line-height: 1.5em;
 
     box-shadow: 0px 0px 6px 0px var(--clr-box-shadow);
 
     transition: background-color .3s ease-in;
     transform-origin: left;
+}
+
+.blogs nav .navigateToStart p,
+.blogs nav .navigateToPinnedBlog p {
+    padding-left: 1em;
+}
+
+.blogs nav .navigateToDatabaseBlog p {
+    padding: 0em 1em;
+}
+
+.blogs nav .navigateToStart .pinnedBlogIcon,
+.blogs nav .navigateToPinnedBlog .pinnedBlogIcon {
+    padding-right: 1em;
 }
 
 .blogs nav .navigateToDatabaseBlog > * {
@@ -74,7 +90,7 @@
     justify-content: flex-start;
     align-items: center;
 
-    width: 90%;
+    width: 85%;
 }
 
 .blogs main .pinnedBlog {

@@ -1,5 +1,3 @@
-import { useEffect } from "react"
-
 import { scrollToComponent } from "../functions/scrollToComponent"
 
 import { faHome, faMapPin } from "@fortawesome/free-solid-svg-icons"
@@ -8,10 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import PropTypes from "prop-types"
 
 const Navbar = ({ blogNames }) => {
-  useEffect(() => {
-    console.log(blogNames)
-  }, [blogNames])
-  
     return (
     <>
         <section className="navigateToStart" onClick={() => scrollToComponent("header")}>

@@ -12,7 +12,7 @@ class BlogUploader {
             }
 
             if (data.length > 0) {
-                return res.json("Success")
+                return res.json(data)
             } else {
                 return res.json("Error")
             }

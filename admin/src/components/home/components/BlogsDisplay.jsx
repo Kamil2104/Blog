@@ -23,7 +23,7 @@ const BlogsDisplay = ({blogs, setDisplayOrEdit, setEditedBlogName}) => {
       name: blogName
     }
 
-    axios.post("http://localhost:3001/deleteBlog", values)
+    axios.post("http://localhost:3002/deleteBlog", values)
     .then(res => {
         if (res.data === "Success") {
           navigate('/deleteBlogSuccessAnimation')

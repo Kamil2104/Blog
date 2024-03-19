@@ -5,7 +5,7 @@ const cors = require("cors");
 const multer = require("multer"); 
 
 const router = express.Router();
-const PORT = 3001;
+const PORT = 3002;
 
 const authentication = require('./authentication');
 const blogManagement = require('./blogManagement');

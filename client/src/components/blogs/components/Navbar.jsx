@@ -25,26 +25,6 @@ const Navbar = () => {
                 <p> First Blog </p>
             </section>
         </section>
-        <section className="navigateToDatabaseBlog">
-            <section className="secondBlog">
-                <p> Second Blog </p>
-            </section>
-        </section>
-        <section className="navigateToDatabaseBlog">
-            <section className="thirdBlog">
-                <p> Third Blog </p>
-            </section>
-        </section>
-        <section className="navigateToDatabaseBlog">
-            <section className="fourthBlog">
-                <p> Fourth Blog </p>
-            </section>
-        </section>
-        <section className="navigateToDatabaseBlog">
-            <section className="fifthBlog">
-                <p> Fifth Blog </p>
-            </section>
-        </section>
     </>
   )
 }

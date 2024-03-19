@@ -2,8 +2,19 @@ import { scrollToComponent } from "../functions/scrollToComponent"
 
 import { faHome, faMapPin } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import axios from "axios"
 
 const Navbar = () => {
+  axios.post('http://localhost:3001/getNames')
+  .then(res => {
+    if (res.data === "Success") {
+        console.log(res.data)
+    } else {
+        alert("Something went wrong with our servers. Try again later.")
+    }
+  })
+  .catch(err => console.log(err))
+
   return (
     <>
         <section className="navigateToStart" onClick={() => scrollToComponent("header")}>

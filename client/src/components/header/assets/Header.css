@@ -20,6 +20,8 @@
     align-items: flex-end;
 
     width: 30%;
+
+    padding: 1em;
 }
 
 .photoContainer img {
@@ -36,6 +38,8 @@
     align-items: center;
 
     width: 70%;
+
+    padding: 1em;
 }
 
 .textContainer h1 {
@@ -47,4 +51,38 @@
     line-height: 1.5em;
 
     text-align: center;
+}
+
+@media screen and (max-width: 680px) {
+    .header {
+        height: 200px;
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .photoContainer {
+        align-items: center;
+
+        height: 100px;
+        width: 100%;
+    }
+
+    .photoContainer img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .textContainer {
+        height: 100px;
+        width: 100%;
+    }
+
+    .textContainer h1 {
+        font-size: 1.25em;
+    }
+
+    .textContainer p {
+        font-size: 0.8em;
+    }
 }

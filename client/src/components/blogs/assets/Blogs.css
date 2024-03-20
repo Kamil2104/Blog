@@ -17,9 +17,9 @@
     align-items: center;
 
     height: fit-content;
-    width: 15%;
+    width: 20%;
 
-    margin-left: 1em;
+    margin-left: 2.5em;
     padding: 1em;
 
     box-shadow: 0px 0px 20px 0px var(--clr-box-shadow);
@@ -47,10 +47,22 @@
 
 .blogs nav .navigateToStart p,
 .blogs nav .navigateToPinnedBlog p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    
     padding-left: 1em;
 }
 
+.blogs nav .navigateToPinnedBlog p {
+    text-align: center;
+}
+
 .blogs nav .navigateToDatabaseBlog p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    
     padding: 0em 1em;
 }
 
@@ -60,6 +72,10 @@
 }
 
 .blogs nav .navigateToDatabaseBlog > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     height: 100%;
     width: 100%;
 
@@ -90,7 +106,7 @@
     justify-content: flex-start;
     align-items: center;
 
-    width: 85%;
+    width: 80%;
 }
 
 .blogs main .pinnedBlog {
@@ -101,7 +117,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     gap: 2em;
 
     min-height: 1350px;
@@ -117,7 +133,7 @@
     justify-content: flex-start;
     align-items: center;
     
-    min-height: 60px;
+    height: 80px;
     width: 100%;
 
     box-shadow: 0px 2px 12px 0px var(--clr-box-shadow)
@@ -171,7 +187,7 @@
     flex: 1;
     width: 90%;
 
-    margin: 0em 2em 1.5em 2em;
+    padding: 0em 2em 1.5em 2em;
 }
 
 .blogs main .pinnedBlog .blog article p {
@@ -182,4 +198,215 @@
 
 .blogs main .pinnedBlog .blog article p.lastParagraph {
     padding-top: 2em;
+}
+
+@media screen and (max-width: 770px) {
+    .blogs main .pinnedBlog .blog header .pinnedBlogName h1 {
+        font-size: 2.1rem;
+    }
+
+    .blogs main .pinnedBlog .blog header .pinnedBlogIcon .pinIcon {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .blogs main .pinnedBlog .blog article p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .blogs main .pinnedBlog .blog header .pinnedBlogName h1,
+    .blogs main .pinnedBlog .blog header .pinnedBlogIcon .pinIcon {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .blogs {
+        flex-direction: column;
+        align-items: center;
+
+        gap: 3em;
+    }
+
+    .blogs nav {
+        flex-direction: row;
+        gap: 1em;
+
+        width: fit-content;
+        max-width: 80%;
+
+        margin: 0;
+
+        overflow-y: auto;
+    }
+
+    .blogs nav > * {
+        min-width: 80px;
+        max-width: 100px;
+    }
+
+    .blogs nav .navigateToDatabaseBlog {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blogs nav .navigateToDatabaseBlog > * {
+        height: 50px;
+        width: 100%;
+    
+        text-align: center;
+    }
+
+    .blogs nav .navigateToStart,
+    .blogs nav .navigateToPinnedBlog,
+    .blogs nav .navigateToDatabaseBlog {
+        height: 50px;
+    }
+
+    .blogs nav .navigateToStart p,
+    .blogs nav .navigateToPinnedBlog p,
+    .blogs nav .navigateToDatabaseBlog p,
+    .blogs nav .navigateToStart .pinnedBlogIcon,
+    .blogs nav .navigateToPinnedBlog .pinnedBlogIcon {
+        font-size: .7em;
+        line-height: 1.1em;
+    }
+
+    .blogs main {
+        width: 100%;
+    }
+
+    .blogs main .pinnedBlog .blog header .pinnedBlogName,
+    .blogs main .pinnedBlog .blog header .pinnedBlogIcon {
+        height: 40px;
+
+        padding: 1em 2em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .blogs nav .navigateToStart,
+    .blogs nav .navigateToPinnedBlog {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 0em;
+    }
+
+    .blogs nav .navigateToStart p,
+    .blogs nav .navigateToPinnedBlog p {
+        padding: 0;
+    }
+
+    .blogs nav .navigateToStart .pinnedBlogIcon,
+    .blogs nav .navigateToPinnedBlog .pinnedBlogIcon {
+        margin-top: 1em;
+    }
+
+    .blogs nav .navigateToStart p,
+    .blogs nav .navigateToPinnedBlog p,
+    .blogs nav .navigateToDatabaseBlog p,
+    .blogs nav .navigateToStart .pinnedBlogIcon,
+    .blogs nav .navigateToPinnedBlog .pinnedBlogIcon  {
+        font-size: .5em;
+    }
+
+    .blogs nav .navigateToStart .pinnedBlogIcon,
+    .blogs nav .navigateToPinnedBlog .pinnedBlogIcon {
+        padding-right: 0em;
+    }
+
+    .blogs main .pinnedBlog .blog header {
+        height: 60px;
+    }
+
+    .blogs main .pinnedBlog .blog header .pinnedBlogName h1,
+    .blogs main .pinnedBlog .blog header .pinnedBlogIcon .pinIcon  {
+        font-size: 1.25rem;
+    }
+
+    .blogs main .pinnedBlog .blog article p {
+        font-size: .8rem;
+    }
+
+    .blogs main .pinnedBlog .blog header .pinnedBlogName,
+    .blogs main .pinnedBlog .blog header .pinnedBlogIcon {
+        height: 40px;
+
+        padding: .5em 1.5em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .blogs nav .navigateToStart p,
+    .blogs nav .navigateToPinnedBlog p,
+    .blogs nav .navigateToDatabaseBlog p,
+    .blogs nav .navigateToStart .pinnedBlogIcon,
+    .blogs nav .navigateToPinnedBlog .pinnedBlogIcon  {
+        font-size: .5em;
+        
+        padding: 0;
+    }
+
+    .blogs main .pinnedBlog .blog header .pinnedBlogName {
+        width: 90%;
+    }
+
+    .blogs main .pinnedBlog .blog header .pinnedBlogIcon {
+        width: 10%;
+    }
+
+    .blogs main .pinnedBlog .blog header .pinnedBlogName h1,
+    .blogs main .pinnedBlog .blog header .pinnedBlogIcon .pinIcon  {
+        font-size: 1rem;
+    }
+
+    .blogs main .pinnedBlog .blog header .pinnedBlogIcon .pinIcon {
+        padding-left: 0em;
+    }
+
+    .blogs main .pinnedBlog .blog article p {
+        font-size: .7rem;
+    }
+
+    .blogs main .pinnedBlog .blog header .pinnedBlogName,
+    .blogs main .pinnedBlog .blog header .pinnedBlogIcon {
+        height: 30px;
+
+        padding: .5em 1.5em;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .blogs nav {
+        margin: 0em 5em;
+    }
+
+    .blogs main .pinnedBlog .blog header {
+        height: 40px;
+    }
+
+    .blogs main .pinnedBlog .blog header .pinnedBlogName h1,
+    .blogs main .pinnedBlog .blog header .pinnedBlogIcon .pinIcon  {
+        font-size: .65rem;
+    }
+
+    .blogs main .pinnedBlog .blog header .pinnedBlogName h1 {
+        padding-right: 0em;
+    }
+
+    .blogs main .pinnedBlog .blog article p {
+        font-size: .45rem;
+    }
+
+    .blogs main .pinnedBlog .blog header .pinnedBlogName,
+    .blogs main .pinnedBlog .blog header .pinnedBlogIcon {
+        height: 20px;
+
+        padding: 0em 1.5em;
+    }
 }

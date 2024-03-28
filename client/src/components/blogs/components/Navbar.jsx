@@ -30,6 +30,55 @@ const Navbar = ({ blogNames }) => {
                     </section>
                 </section>
             ))}
+            <section className="navigateToPinnedBlog" onClick={() => scrollToComponent("pinnedBlogName")}>
+                <p> About me </p>
+                <FontAwesomeIcon
+                    icon={faMapPin}
+                    className="pinnedBlogIcon"
+                />
+            </section>
+            <section className="navigateToPinnedBlog" onClick={() => scrollToComponent("pinnedBlogName")}>
+                <p> About me </p>
+                <FontAwesomeIcon
+                    icon={faMapPin}
+                    className="pinnedBlogIcon"
+                />
+            </section>
+            <section className="navigateToPinnedBlog" onClick={() => scrollToComponent("pinnedBlogName")}>
+                <p> About me </p>
+                <FontAwesomeIcon
+                    icon={faMapPin}
+                    className="pinnedBlogIcon"
+                />
+            </section>
+            <section className="navigateToPinnedBlog" onClick={() => scrollToComponent("pinnedBlogName")}>
+                <p> About me </p>
+                <FontAwesomeIcon
+                    icon={faMapPin}
+                    className="pinnedBlogIcon"
+                />
+            </section>
+            <section className="navigateToPinnedBlog" onClick={() => scrollToComponent("pinnedBlogName")}>
+                <p> About me </p>
+                <FontAwesomeIcon
+                    icon={faMapPin}
+                    className="pinnedBlogIcon"
+                />
+            </section>
+            <section className="navigateToPinnedBlog" onClick={() => scrollToComponent("pinnedBlogName")}>
+                <p> About me </p>
+                <FontAwesomeIcon
+                    icon={faMapPin}
+                    className="pinnedBlogIcon"
+                />
+            </section>
+            <section className="navigateToPinnedBlog" onClick={() => scrollToComponent("pinnedBlogName")}>
+                <p> About me </p>
+                <FontAwesomeIcon
+                    icon={faMapPin}
+                    className="pinnedBlogIcon"
+                />
+            </section>
         </>
   )
 }

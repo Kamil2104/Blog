@@ -17,11 +17,16 @@
     align-items: center;
     gap: 1em;
     
-    height: fit-content;
+    position: sticky;
+    top: 1.5em;
+
+    max-height: 75dvh;
     width: 20%;
 
     margin-left: 2.5em;
     padding: 1em;
+
+    overflow-y: auto;
 
     box-shadow: 0px 0px 20px 0px var(--clr-box-shadow);
     background-color: white;
@@ -201,30 +206,13 @@
     padding-top: 2em;
 }
 
-@media screen and (max-width: 770px) {
-    .blogs main .pinnedBlog .blog header .pinnedBlogName h1 {
-        font-size: 2.1rem;
-    }
-
-    .blogs main .pinnedBlog .blog header .pinnedBlogIcon .pinIcon {
-        font-size: 1.8em;
+@media screen and (max-width: 1000px) {
+    .blogs nav::-webkit-scrollbar {
+        width: .2em;
     }
 }
 
-@media screen and (max-width: 750px) {
-    .blogs main .pinnedBlog .blog article p {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .blogs main .pinnedBlog .blog header .pinnedBlogName h1,
-    .blogs main .pinnedBlog .blog header .pinnedBlogIcon .pinIcon {
-        font-size: 1.8rem;
-    }
-}
-
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 800px) {
     .blogs {
         flex-direction: column;
         align-items: center;
@@ -242,11 +230,14 @@
         margin: 0;
 
         overflow-y: auto;
+
+        position: relative;
+        top: 0;
     }
 
     .blogs nav > * {
-        min-width: 80px;
-        max-width: 100px;
+        min-width: 100px;
+        max-width: 120px;
     }
 
     .blogs nav .navigateToDatabaseBlog {
@@ -289,7 +280,35 @@
     }
 }
 
+@media screen and (max-width: 770px) {
+    .blogs main .pinnedBlog .blog header .pinnedBlogName h1 {
+        font-size: 2.1rem;
+    }
+
+    .blogs main .pinnedBlog .blog header .pinnedBlogIcon .pinIcon {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .blogs main .pinnedBlog .blog article p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .blogs main .pinnedBlog .blog header .pinnedBlogName h1,
+    .blogs main .pinnedBlog .blog header .pinnedBlogIcon .pinIcon {
+        font-size: 1.8rem;
+    }
+}
+
 @media screen and (max-width: 500px) {
+    .blogs nav > * {
+        min-width: 80px;
+        max-width: 100px;
+    }
+
     .blogs nav .navigateToStart,
     .blogs nav .navigateToPinnedBlog {
         flex-direction: column-reverse;
@@ -411,7 +430,7 @@
 }
 
 ::-webkit-scrollbar {
-    height: 0.6em;
+    height: .6em;
     width: 1em;
 }
 
@@ -421,4 +440,9 @@
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--clr-box-shadow);
+}
+
+.blogs nav::-webkit-scrollbar {
+    height: .5em;
+    width: .7em;
 }

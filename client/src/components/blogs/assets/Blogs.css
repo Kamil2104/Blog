@@ -16,7 +16,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 1em;
-
+    
     height: fit-content;
     width: 20%;
 
@@ -349,8 +349,6 @@
     .blogs nav .navigateToStart .pinnedBlogIcon,
     .blogs nav .navigateToPinnedBlog .pinnedBlogIcon  {
         font-size: .5em;
-        
-        padding: 0;
     }
 
     .blogs main .pinnedBlog .blog header .pinnedBlogName {

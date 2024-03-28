@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import PropTypes from "prop-types"
 
 const Navbar = ({ blogNames }) => {
+
     return (
     <>
         <section className="navigateToStart" onClick={() => scrollToComponent("header")}>
@@ -24,7 +25,7 @@ const Navbar = ({ blogNames }) => {
         </section>
         {blogNames.map((blog) => (
             <section className="navigateToDatabaseBlog" key={blog.name}>
-                <section className={blog.name} onClick={scrollToComponent(blog.name)}>
+                <section className={blog.name} onClick={() => scrollToComponent(blog.name)}>
                     <p> {blog.name} </p>
                 </section>
             </section>

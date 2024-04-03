@@ -7,7 +7,7 @@
     flex: 1;
     width: 100%;
 
-    padding: 3em 0em;
+    padding: 5em 0em 3em 0em;
 }
 
 .blogs nav {
@@ -15,7 +15,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 1em;
+    gap: 1.5em;
     
     position: sticky;
     top: 1.5em;
@@ -24,7 +24,7 @@
     width: 20%;
 
     margin-left: 2.5em;
-    padding: 1em;
+    padding: 1.25em 1.25em 1.5em 1.25em;
 
     overflow-y: auto;
 
@@ -46,9 +46,6 @@
     line-height: 1.5em;
 
     box-shadow: 0px 0px 6px 0px var(--clr-box-shadow);
-
-    transition: background-color .3s ease-in;
-    transform-origin: left;
 }
 
 .blogs nav .navigateToStart p,
@@ -96,6 +93,28 @@
     background-color: var(--clr-box-shadow);
 }
 
+.blogs nav .navigateToStart:hover::before,
+.blogs nav .navigateToPinnedBlog:hover::before,
+.blogs nav .navigateToDatabaseBlog > *:hover::before {
+    content: attr(data-tooltip);
+
+    
+    display: block;
+    position: absolute;
+    transform: translate(0, -40px);
+    
+    height: fit-content;
+    width: 90%;
+
+    font-size: .75em;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    background-color: gray;
+}
+
 .blogs nav .navigateToStart,
 .blogs nav .navigateToPinnedBlog {
     gap: 1em;
@@ -126,7 +145,7 @@
     align-items: center;
     gap: 2em;
 
-    min-height: 1350px;
+    height: fit-content;
     width: 100%;
 
     background-color: var(--clr-blogs-bg);
@@ -257,6 +276,12 @@
     .blogs nav .navigateToPinnedBlog,
     .blogs nav .navigateToDatabaseBlog {
         height: 50px;
+    }
+
+    .blogs nav .navigateToStart:hover::before,
+    .blogs nav .navigateToPinnedBlog:hover::before,
+    .blogs nav .navigateToDatabaseBlog > *:hover::before {
+        content: none;
     }
 
     .blogs nav .navigateToStart p,

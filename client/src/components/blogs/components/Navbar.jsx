@@ -9,6 +9,9 @@ const Navbar = ({ blogNames }) => {
 
     return (
         <>
+            <section className="pinnedBlogsHeader">
+                <p> Pinned  </p>
+            </section>
             <section className="navigateToStart" onClick={() => scrollToComponent("header")} data-tooltip="Start">
                 <p> Start </p>
                 <FontAwesomeIcon
@@ -22,6 +25,12 @@ const Navbar = ({ blogNames }) => {
                     icon={faMapPin}
                     className="pinnedBlogIcon"
                 />
+            </section>
+            <section className="navigateSeparator">
+                {/* Separates main navbar options from options from database  */}
+            </section>
+            <section className="databaseBlogsHeader">
+                <p> Recently uploaded </p>
             </section>
             {blogNames.map((blog) => (
                 <section className="navigateToDatabaseBlog" key={blog.name}>

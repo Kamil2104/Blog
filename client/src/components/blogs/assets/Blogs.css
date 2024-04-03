@@ -48,6 +48,30 @@
     box-shadow: 0px 0px 6px 0px var(--clr-box-shadow);
 }
 
+.blogs nav .pinnedBlogsHeader,
+.blogs nav .databaseBlogsHeader {
+    width: 100%;
+
+    text-align: center;
+
+    background-color: lightgray;
+}
+
+.blogs nav .pinnedBlogsHeader p,
+.blogs nav .databaseBlogsHeader p {
+    font-size: 1.25em;
+    
+    padding: 0;
+    margin: 0;
+}
+
+.blogs nav .navigateSeparator {
+    height: .2em;
+    width: 100%;   
+
+    background-color: gray;
+}
+
 .blogs nav .navigateToStart p,
 .blogs nav .navigateToPinnedBlog p {
     text-overflow: ellipsis;

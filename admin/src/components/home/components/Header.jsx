@@ -23,7 +23,7 @@ const Header = ({ setActualPanel }) => {
     }
 
     const handleLogOut = () => {
-        axios.post('http://localhost:3001/logOut')
+        axios.post('http://localhost:3002/logOut')
         .then(res => {
             if (res.data === "Success") {
                 navigate('/')

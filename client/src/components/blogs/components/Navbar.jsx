@@ -9,7 +9,7 @@ const Navbar = ({ blogNames }) => {
 
     return (
         <>
-            <section className="pinnedBlogsHeader">
+            <section className="pinnedInformationsHeader">
                 <p> Pinned <br /> informations </p>
             </section>
             <section className="navigateToStart" onClick={() => scrollToComponent("header")} data-tooltip="Start">

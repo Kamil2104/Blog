@@ -48,7 +48,7 @@
     box-shadow: 0px 0px 6px 0px var(--clr-box-shadow);
 }
 
-.blogs nav .pinnedBlogsHeader,
+.blogs nav .pinnedInformationsHeader,
 .blogs nav .databaseBlogsHeader {
     width: 100%;
 
@@ -57,7 +57,7 @@
     background-color: lightgray;
 }
 
-.blogs nav .pinnedBlogsHeader p,
+.blogs nav .pinnedInformationsHeader p,
 .blogs nav .databaseBlogsHeader p {
     font-size: 1.25em;
     
@@ -279,7 +279,7 @@
         top: 0;
     }
 
-    .blogs nav > *:not(.navigateSeparator, .pinnedBlogsHeader, .databaseBlogsHeader) {
+    .blogs nav > *:not(.navigateSeparator, .pinnedInformationsHeader, .databaseBlogsHeader) {
         min-width: 110px;
         height: 100%;
     }
@@ -318,7 +318,7 @@
         margin: 0em 1em;
     }
 
-    .blogs nav .pinnedBlogsHeader,
+    .blogs nav .pinnedInformationsHeader,
     .blogs nav .databaseBlogsHeader {
         min-width: 125px;
 
@@ -327,7 +327,7 @@
         padding: 0em 1em;
     }
 
-    .blogs nav .pinnedBlogsHeader p {
+    .blogs nav .pinnedInformationsHeader p {
         display: block;
         white-space: pre-line;
     }
@@ -404,7 +404,7 @@
         padding-right: 0em;
     }
 
-    .blogs nav .pinnedBlogsHeader,
+    .blogs nav .pinnedInformationsHeader,
     .blogs nav .databaseBlogsHeader {
         display: flex;
         justify-content: center;

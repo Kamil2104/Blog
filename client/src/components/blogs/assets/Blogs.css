@@ -128,7 +128,7 @@
     transform: translate(0, -40px);
     
     height: fit-content;
-    width: 90%;
+    width: calc(100% - 3em);
 
     font-size: .75em;
     text-align: center;

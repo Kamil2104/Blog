@@ -315,7 +315,6 @@
     .blogs nav .navigateToStart .pinnedBlogIcon,
     .blogs nav .navigateToPinnedBlog .pinnedBlogIcon {
         font-size: .7em;
-        line-height: 1.1em;
     }
 
     .blogs nav .navigateSeparator {

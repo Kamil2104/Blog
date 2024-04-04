@@ -279,9 +279,9 @@
         top: 0;
     }
 
-    .blogs nav > *:not(.navigateSeparator) {
-        min-width: 100px;
-        max-width: 120px;
+    .blogs nav > *:not(.navigateSeparator, .pinnedBlogsHeader, .databaseBlogsHeader) {
+        min-width: 110px;
+        height: 100%;
     }
 
     .blogs nav .navigateToDatabaseBlog {
@@ -295,12 +295,6 @@
         width: 100%;
     
         text-align: center;
-    }
-
-    .blogs nav .navigateToStart,
-    .blogs nav .navigateToPinnedBlog,
-    .blogs nav .navigateToDatabaseBlog {
-        height: 50px;
     }
 
     .blogs nav .navigateToStart:hover::before,
@@ -326,6 +320,8 @@
 
     .blogs nav .pinnedBlogsHeader,
     .blogs nav .databaseBlogsHeader {
+        min-width: 125px;
+
         font-size: .8em;
         
         padding: 0em 1em;

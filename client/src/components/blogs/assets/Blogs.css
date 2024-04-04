@@ -369,21 +369,21 @@
 
 @media screen and (max-width: 500px) {
     .blogs nav > * {
-        min-width: 80px;
-        max-width: 100px;
+        min-height: 60px;
     }
 
     .blogs nav .navigateToStart,
     .blogs nav .navigateToPinnedBlog {
         flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
         gap: 0em;
+
+        min-width: 110px;
     }
 
     .blogs nav .navigateToStart p,
     .blogs nav .navigateToPinnedBlog p {
         padding: 0;
+        margin: 0;
     }
 
     .blogs nav .navigateToStart .pinnedBlogIcon,
@@ -396,12 +396,23 @@
     .blogs nav .navigateToDatabaseBlog p,
     .blogs nav .navigateToStart .pinnedBlogIcon,
     .blogs nav .navigateToPinnedBlog .pinnedBlogIcon  {
-        font-size: .5em;
+        font-size: .6em;
     }
 
     .blogs nav .navigateToStart .pinnedBlogIcon,
     .blogs nav .navigateToPinnedBlog .pinnedBlogIcon {
         padding-right: 0em;
+    }
+
+    .blogs nav .pinnedBlogsHeader,
+    .blogs nav .databaseBlogsHeader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        min-width: 120px;
+        
+        font-size: .6em;
     }
 
     .blogs main .pinnedBlog .blog header {

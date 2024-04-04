@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import PinnedBlog from "./components/PinnedBlogs";
+import PinnedBlog from "./components/PinnedBlog";
 
 import PropTypes from "prop-types"
 

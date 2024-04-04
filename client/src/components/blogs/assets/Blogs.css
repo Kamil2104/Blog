@@ -500,7 +500,7 @@
 
 ::-webkit-scrollbar {
     height: .6em;
-    width: 1em;
+    width: 1dvw;
 }
 
 ::-webkit-scrollbar-track {
@@ -513,5 +513,5 @@
 
 .blogs nav::-webkit-scrollbar {
     height: .5em;
-    width: .7em;
+    width: .8vw;
 }

@@ -10,7 +10,7 @@ const Navbar = ({ blogNames }) => {
     return (
         <>
             <section className="pinnedBlogsHeader">
-                <p> Pinned  </p>
+                <p> Pinned <br /> informations </p>
             </section>
             <section className="navigateToStart" onClick={() => scrollToComponent("header")} data-tooltip="Start">
                 <p> Start </p>
@@ -30,7 +30,7 @@ const Navbar = ({ blogNames }) => {
                 {/* Separates main navbar options from options from database  */}
             </section>
             <section className="databaseBlogsHeader">
-                <p> Recently uploaded </p>
+                <p> Recently <br /> uploaded </p>
             </section>
             {blogNames.map((blog) => (
                 <section className="navigateToDatabaseBlog" key={blog.name}>

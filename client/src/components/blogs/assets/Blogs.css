@@ -66,8 +66,8 @@
 }
 
 .blogs nav .navigateSeparator {
-    height: .2em;
-    width: 100%;   
+    min-height: .2em;
+    min-width: 100%;   
 
     background-color: gray;
 }
@@ -255,6 +255,7 @@
     }
 }
 
+/*   MOBILE VERSION   */
 @media screen and (max-width: 800px) {
     .blogs {
         flex-direction: column;
@@ -278,7 +279,7 @@
         top: 0;
     }
 
-    .blogs nav > * {
+    .blogs nav > *:not(.navigateSeparator) {
         min-width: 100px;
         max-width: 120px;
     }
@@ -315,6 +316,25 @@
     .blogs nav .navigateToPinnedBlog .pinnedBlogIcon {
         font-size: .7em;
         line-height: 1.1em;
+    }
+
+    .blogs nav .navigateSeparator {
+        height: 100%;
+        min-width: .3em;
+
+        margin: 0em 1em;
+    }
+
+    .blogs nav .pinnedBlogsHeader,
+    .blogs nav .databaseBlogsHeader {
+        font-size: .8em;
+        
+        padding: 0em 1em;
+    }
+
+    .blogs nav .pinnedBlogsHeader p {
+        display: block;
+        white-space: pre-line;
     }
 
     .blogs main {

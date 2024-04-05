@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import PinnedBlog from "./components/PinnedBlog";
+import DatabaseBlog from './components/DatabaseBlog'
 
 import PropTypes from "prop-types"
 
@@ -16,7 +17,9 @@ const Blogs = ({ blogNames }) => {
                     <PinnedBlog />
                 </section>
                 <section className="databaseBlogs">
-                    {/* Placeholder for database blogs */}
+                    {blogNames.map((blog) => (
+                        <DatabaseBlog key={blog.name} blogName={blog.name} />
+                    ))}
                 </section>
             </main>
          </section>

@@ -21,3 +21,4 @@ app.use('/', router)
 // ACTIONS:
 
 router.post('/getNames', blogUploader.getBlogName)
+router.post('/getNamesDescriptionsAndDates', blogUploader.getBlogNameDescriptionAndDate)

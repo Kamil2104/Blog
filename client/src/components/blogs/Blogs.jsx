@@ -5,6 +5,7 @@ import DatabaseBlog from './components/DatabaseBlog'
 import PropTypes from "prop-types"
 
 import './assets/Blogs.css';
+import './assets/DatabaseBlog.css'
 
 const Blogs = ({ blogNames }) => {
     return (

@@ -23,7 +23,13 @@ const Blogs = ({ blogNames }) => {
                 </section>
                 <section className="databaseBlogs">
                     {blogNameDescriptionAndDate.map((blog) => (
-                        <DatabaseBlog key={blog.name} blogName={blog.name} blogDescription={blog.description} blogDate={blog.date} isLoading={isLoading}/>
+                        <DatabaseBlog 
+                            key={blog.name} 
+                            blogName={blog.name} 
+                            blogDescription={blog.description} 
+                            blogDate={blog.date} 
+                            isLoading={isLoading}
+                        />
                     ))}
                 </section>
             </main>

@@ -2,7 +2,11 @@ import Loader from "../../loader/components/Loader.jsx";
 
 import PropTypes from "prop-types"
 
+import moment from "moment"
+
 const DatabaseBlog = ({ blogName, blogDescription, blogDate, isLoading }) => {
+
+  const formattedDate = moment(blogDate).format("YYYY-MM-DD, HH:mm")
 
   return (
     <section className="databaseBlog" id={blogName}>
@@ -17,7 +21,7 @@ const DatabaseBlog = ({ blogName, blogDescription, blogDate, isLoading }) => {
               </article>
               <footer>
                   <section className="dateOfUploadingBlog">
-                      <p> {blogDate} </p>
+                      <p> {formattedDate} </p>
                   </section>
                   <section className="showMoreContentParagraphContainer">
                     <p> Show more </p>

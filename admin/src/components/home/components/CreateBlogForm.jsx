@@ -139,7 +139,7 @@ const CreateBlogForm = () => {
                         <textarea 
                             id="blogDescription" 
                             placeholder="Description:"
-                            maxLength={1000}
+                            maxLength={5000}
                             ref={blogDescriptionRef}
                             onChange={() => {
                                 handleChangesOnInputFields("blogDescription", "labelDescription");
@@ -149,7 +149,7 @@ const CreateBlogForm = () => {
                         />
                         <p
                             id="paragraphDescriptionLength"
-                        > {descriptionLength} / 1000 </p>
+                        > {descriptionLength} / 5000 </p>
                     </section>
                 </section>
                 <section className="rightPanel">

@@ -146,7 +146,7 @@ const Form = () => {
                 id="login"
                 type="text"
                 spellCheck="false" 
-                autoComplete="true"
+                autoComplete="off"
                 placeholder="Username:"
                 onChange={handleLoginChange}
                 ref={loginRef}
@@ -160,7 +160,7 @@ const Form = () => {
                     id="password"
                     type={showPassword ? "text" : "password"}
                     spellCheck="false"
-                    autoComplete="false"
+                    autoComplete="off"
                     placeholder="Password:"
                     ref={passwordRef} 
                     onChange={handlePasswordChange}

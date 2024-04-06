@@ -30,7 +30,7 @@
     justify-content: flex-start;
     align-items: center;
 
-    min-height: 80px;
+    height: fit-content;
     width: 100%;
 
     box-shadow: 0px 2px 12px 0px var(--clr-box-shadow)
@@ -51,6 +51,8 @@
 
     height: fit-content;
     width: 100%;
+
+    padding-top: 1em;
 }
 
 .databaseBlog main article {
@@ -110,4 +112,109 @@
 
 .databaseBlog main footer .showMoreContentParagraphContainer p:hover {
     cursor: pointer;
+}
+
+@media screen and (max-width: 770px) {
+    .databaseBlog header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .databaseBlog main article p {
+        font-size: 1rem;
+    }
+
+    .databaseBlog main footer .dateOfUploadingBlog p {
+        font-size: 1rem;
+    }
+
+    .databaseBlog main footer .showMoreContentParagraphContainer p {
+        font-size: 1rem ;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .databaseBlog header h1 {
+        font-size: 1.25rem;
+    }
+
+    .databaseBlog main article p {
+        font-size: .8rem;
+    }
+
+    .databaseBlog main footer .dateOfUploadingBlog p {
+        font-size: .8rem;
+    }
+
+    .databaseBlog main footer .showMoreContentParagraphContainer p {
+        font-size: .8rem ;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .databaseBlog main footer .dateOfUploadingBlog p {
+        font-size: .7rem;
+    }
+}
+
+@media screen and (max-width: 400px) { 
+    .databaseBlog header h1 {
+        padding: .8em 1.5em;
+        
+        font-size: 1rem;
+    }
+
+    .databaseBlog main article p {
+        font-size: .7rem;
+    }
+
+    .databaseBlog main footer .showMoreContentParagraphContainer p {
+        font-size: .7rem ;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .databaseBlog main footer {
+        flex-direction: column-reverse;
+    }
+
+    .databaseBlog main footer .dateOfUploadingBlog {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .databaseBlog main footer .dateOfUploadingBlog p {
+        margin: 0;
+        margin-top: 1em;
+    }
+
+    .databaseBlog main footer .showMoreContentParagraphContainer {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .databaseBlog main footer .showMoreContentParagraphContainer p {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .databaseBlog header h1 {
+        font-size: .65rem;
+    }
+
+    .databaseBlog main article p {
+        font-size: .45rem;
+    }
+
+    .databaseBlog main footer .dateOfUploadingBlog p {
+        font-size: .45rem;
+    }
+
+    .databaseBlog main footer .showMoreContentParagraphContainer p {
+        font-size: .45rem ;
+    }
 }

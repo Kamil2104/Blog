@@ -1,3 +1,5 @@
+import { sliceDescriptionTextHandler } from "../functions/sliceDescriptionText.js";
+
 import Loader from "../../loader/components/Loader.jsx";
 
 import PropTypes from "prop-types"
@@ -17,7 +19,7 @@ const DatabaseBlog = ({ blogName, blogDescription, blogDate, isLoading }) => {
           </header>
           <main>
               <article>
-                  <p> {blogDescription} </p>
+                  <p> {sliceDescriptionTextHandler(blogDescription)} </p>
               </article>
               <footer>
                   <section className="dateOfUploadingBlog">

@@ -1,5 +1,5 @@
 export function sliceDescriptionTextHandler(descriptionText) {
-    if (descriptionText.length >= 100) {
+    if (descriptionText.length >= 200) {
         let slicedDescriptionText = descriptionText.substring(0, 97);
 
         if (slicedDescriptionText.charAt(96) !== ' ') {

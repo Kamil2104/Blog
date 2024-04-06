@@ -1,15 +1,13 @@
 export function sliceDescriptionTextHandler(descriptionText) {
     if (descriptionText.length >= 200) {
-        let slicedDescriptionText = descriptionText.substring(0, 97);
+        let slicedDescriptionText = descriptionText.substring(0, 197);
 
-        if (slicedDescriptionText.charAt(96) !== ' ') {
-            slicedDescriptionText = slicedDescriptionText.substring(0, slicedDescriptionText.lastIndexOf(' '));
+        if (slicedDescriptionText.length === 197 && slicedDescriptionText.charAt(196) !== ' ') {
+            slicedDescriptionText = slicedDescriptionText.slice(0, slicedDescriptionText.lastIndexOf(' '));
         }
     
-        let formattedDescriptionText = slicedDescriptionText + "..."
-    
-        return formattedDescriptionText
+        return slicedDescriptionText + "..."; 
     } else {
-        return descriptionText
+        return descriptionText;
     }
 }

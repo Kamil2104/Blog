@@ -1,0 +1,220 @@
+.databaseBlogs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+
+    height: fit-content;
+    width: 70%;
+
+    margin-top: 8em;
+}
+
+.databaseBlog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height: fit-content;
+    width: 100%;
+
+    box-shadow: 0px 0px 20px 0px var(--clr-box-shadow);
+    background-color: white;
+}
+
+.databaseBlog header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: fit-content;
+    width: 100%;
+
+    box-shadow: 0px 2px 12px 0px var(--clr-box-shadow)
+}
+
+.databaseBlog header h1 {
+    margin: 0;
+    padding: .5em 1em;
+
+    font-size: 2rem;
+}
+
+.databaseBlog main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+    width: 100%;
+
+    padding-top: 1em;
+}
+
+.databaseBlog main article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    height: fit-content;
+    width: 100%;
+}
+
+.databaseBlog main article p {
+    margin: 0;
+    padding: 1em 1em 1.5em 1em;
+
+    font-size: 1.25rem;
+}
+
+.databaseBlog main footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    border-top: .1em solid gray;
+}
+
+.databaseBlog main footer .dateOfUploadingBlog {
+    height: fit-content;
+    width: 50%;
+
+    text-align: left;
+}
+
+.databaseBlog main footer .dateOfUploadingBlog p {
+    padding: 0em 2em .15em 1em;
+
+    font-size: 1em;
+}
+
+.databaseBlog main footer .showMoreContentParagraphContainer  {
+    height: fit-content;
+    width: 50%;
+
+    text-align: right;
+}
+
+.databaseBlog main footer .showMoreContentParagraphContainer p {
+    padding: 0em 2em .15em 1em;
+
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+.databaseBlog main footer .showMoreContentParagraphContainer p:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 770px) {
+    .databaseBlog header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .databaseBlog main article p {
+        font-size: 1rem;
+    }
+
+    .databaseBlog main footer .dateOfUploadingBlog p {
+        font-size: 1rem;
+    }
+
+    .databaseBlog main footer .showMoreContentParagraphContainer p {
+        font-size: 1rem ;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .databaseBlog header h1 {
+        font-size: 1.25rem;
+    }
+
+    .databaseBlog main article p {
+        font-size: .8rem;
+    }
+
+    .databaseBlog main footer .dateOfUploadingBlog p {
+        font-size: .8rem;
+    }
+
+    .databaseBlog main footer .showMoreContentParagraphContainer p {
+        font-size: .8rem ;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .databaseBlog main footer .dateOfUploadingBlog p {
+        font-size: .7rem;
+    }
+}
+
+@media screen and (max-width: 400px) { 
+    .databaseBlog header h1 {
+        padding: .8em 1.5em;
+        
+        font-size: 1rem;
+    }
+
+    .databaseBlog main article p {
+        font-size: .7rem;
+    }
+
+    .databaseBlog main footer .showMoreContentParagraphContainer p {
+        font-size: .7rem ;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .databaseBlog main footer {
+        flex-direction: column-reverse;
+    }
+
+    .databaseBlog main footer .dateOfUploadingBlog {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .databaseBlog main footer .dateOfUploadingBlog p {
+        margin: 0;
+        margin-top: 1em;
+    }
+
+    .databaseBlog main footer .showMoreContentParagraphContainer {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .databaseBlog main footer .showMoreContentParagraphContainer p {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .databaseBlog header h1 {
+        font-size: .65rem;
+    }
+
+    .databaseBlog main article p {
+        font-size: .45rem;
+    }
+
+    .databaseBlog main footer .dateOfUploadingBlog p {
+        font-size: .45rem;
+    }
+
+    .databaseBlog main footer .showMoreContentParagraphContainer p {
+        font-size: .45rem ;
+    }
+}

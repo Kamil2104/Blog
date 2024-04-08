@@ -50,7 +50,7 @@ const FullBlog = () => {
               </aside>
           </main>
               <footer>
-                  {moment(blog[0]?.date).format("YYYY-MM-DD, HH:mm")}
+                  {moment(blog[0]?.date).format("DD-MM-YYYY, HH:mm")}
               </footer>
           </>
       )}

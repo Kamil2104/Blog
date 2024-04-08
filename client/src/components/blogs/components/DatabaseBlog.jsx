@@ -10,7 +10,7 @@ import moment from "moment"
 const DatabaseBlog = ({ blogName, blogDescription, blogDate, isLoading }) => {
   const navigate = useNavigate()
 
-  const formattedDate = moment(blogDate).format("YYYY-MM-DD, HH:mm")
+  const formattedDate = moment(blogDate).format("DD-MM-YYYY, HH:mm")
 
   const handleNavigation = () => {
       navigate("/fullBlog", { state: { blogName } })

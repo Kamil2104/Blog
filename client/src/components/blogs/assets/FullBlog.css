@@ -1,6 +1,48 @@
 .fullBlog {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
     height: 100dvh;
     width: 100%;
 
-    background-color: red;
+    background-color: white;
+}
+
+.fullBlog .loader {
+    padding: 0;
+}
+
+.fullBlog header {
+    width: 100%;
+}
+
+.fullBlog main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 100%;
+}
+
+.fullBlog main article {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 60%;
+}
+
+.fullBlog main aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40%;
+}
+
+.fullBlog footer {
+    width: 100%;
 }

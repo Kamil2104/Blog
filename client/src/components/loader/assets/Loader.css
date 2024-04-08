@@ -22,6 +22,15 @@
     animation: rotateLoader .8s infinite linear;
 }
 
+@media screen and (max-width: 500px) {
+    .loaderAnimation {
+        height: 100px;
+        width: 100px;
+
+        border-top: .2em solid darkgray;
+    }
+}
+
 @keyframes rotateLoader {
     0% {
         transform: rotate(0deg);

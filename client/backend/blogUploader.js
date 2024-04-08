@@ -34,6 +34,27 @@ class BlogUploader {
             }
         })
     }
+
+    getBlog(req, res) {
+        const query = "SELECT * FROM blogs WHERE name = ?"
+        const values = [
+            req.body.name
+        ]
+
+        console.log(req.body.name)
+
+        blogdb.query(query, values, (err, data) => {
+            if (err) {
+                console.log(err)
+            }
+
+            if (data.length > 0) {
+                return res.json(data)
+            } else {
+                return res.json("Error")
+            }
+        })
+    }
 }
 
 module.exports = new BlogUploader()

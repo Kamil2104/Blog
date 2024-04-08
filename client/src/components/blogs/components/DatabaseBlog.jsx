@@ -1,14 +1,20 @@
+import { useNavigate } from 'react-router-dom'
+
 import { sliceDescriptionTextHandler } from "../functions/sliceDescriptionText.js";
 
 import Loader from "../../loader/components/Loader.jsx";
 
 import PropTypes from "prop-types"
-
 import moment from "moment"
 
 const DatabaseBlog = ({ blogName, blogDescription, blogDate, isLoading }) => {
+  const navigate = useNavigate()
 
   const formattedDate = moment(blogDate).format("YYYY-MM-DD, HH:mm")
+
+  const handleNavigation = () => {
+      navigate("/fullBlog", { state: { blogName } })
+  }
 
   return (
     <section className="databaseBlog" id={blogName}>
@@ -26,7 +32,7 @@ const DatabaseBlog = ({ blogName, blogDescription, blogDate, isLoading }) => {
                       <p> {formattedDate} </p>
                   </section>
                   <section className="showMoreContentParagraphContainer">
-                    <p> Show more </p>
+                    <p onClick={handleNavigation}> Show more </p>
                   </section>
               </footer>
           </main>

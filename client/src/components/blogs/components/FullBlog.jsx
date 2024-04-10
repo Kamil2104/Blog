@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom' 
 
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+
 import Loader from '../../loader/components/Loader'
 import uploadingImage from '../assets/uploadingImage.jpg'
 
@@ -10,6 +12,7 @@ import PropTypes from "prop-types"
 import moment from 'moment'
 
 import '../assets/FullBlog.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const FullBlog = () => {
   const location = useLocation()
@@ -39,7 +42,15 @@ const FullBlog = () => {
       ) : (
         <>
             <header>
-                <h1> {blog[0]?.name} </h1>
+                <section className='blogNameContainer'>
+                    <h1> {blog[0]?.name} </h1>
+                </section>
+                <section className='iconContainer'>
+                    <FontAwesomeIcon
+                      icon={faArrowLeft}
+                      className='backIcon'
+                    />
+                </section>
             </header>
           <main>
               <article>

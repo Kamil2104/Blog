@@ -41,8 +41,6 @@ class BlogUploader {
             req.body.name
         ]
 
-        console.log(req.body.name)
-
         blogdb.query(query, values, (err, data) => {
             if (err) {
                 console.log(err)

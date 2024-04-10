@@ -15,7 +15,34 @@
 }
 
 .fullBlog header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
     width: 100%;
+
+    font-size: 2rem;
+
+    box-shadow: 0px 2px 12px 0px var(--clr-box-shadow)
+}
+
+.fullBlog header .blogNameContainer {
+    width: 90%;
+
+    padding-left: 1.5em;
+}
+
+.fullBlog header .iconContainer {
+    width: 10%;
+    
+    padding-right: 2.5em;
+
+    text-align: right;
+}
+
+.fullBlog header .iconContainer .backIcon:hover {
+    cursor: pointer;
 }
 
 .fullBlog main {

@@ -54,7 +54,7 @@ const FullBlog = () => {
             </header>
           <main>
               <article>
-                  {blog[0]?.description}
+                  <p> {blog[0]?.description} </p>
               </article>
               <aside>
                   <img src={isBlogPhotoUploaded === true ? URL.createObjectURL(blogPhoto) : uploadingImage} alt="blogPhoto" />

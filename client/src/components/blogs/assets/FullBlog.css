@@ -4,6 +4,7 @@
     justify-content: flex-start;
     align-items: center;
 
+    min-height: 100dvh;
     width: 100%;
 
     background-color: white;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom' 
+import { useLocation, useNavigate } from 'react-router-dom' 
 
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
@@ -15,6 +15,8 @@ import '../assets/FullBlog.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const FullBlog = () => {
+  const navigate = useNavigate()
+
   const location = useLocation()
   const blogName = location?.state?.blogName
 
@@ -35,6 +37,10 @@ const FullBlog = () => {
     }
   }, [blog])
 
+  const navigateToMainPage = () => {
+    navigate("/")
+  }
+
   return (
     <section className='fullBlog'>
       { isLoading ? (
@@ -53,6 +59,7 @@ const FullBlog = () => {
                   <FontAwesomeIcon
                     icon={faArrowLeft}
                     className='backIcon'
+                    onClick={navigateToMainPage}
                   />
                 </section>
               </section>

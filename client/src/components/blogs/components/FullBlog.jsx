@@ -42,15 +42,20 @@ const FullBlog = () => {
       ) : (
         <>
             <header>
-                <section className='blogNameContainer'>
-                    <h1> {blog[0]?.name} </h1>
-                </section>
-                <section className='iconContainer'>
-                    <FontAwesomeIcon
-                      icon={faArrowLeft}
-                      className='backIcon'
-                    />
-                </section>
+              <section className='header-top'>
+                <p> {moment(blog[0]?.date).format("DD-MM-YYYY, HH:mm")} </p>
+              </section>
+              <section className='header-bottom'>
+                  <section className='blogNameContainer'>
+                      <h1> {blog[0]?.name} </h1>
+                  </section>
+                  <section className='iconContainer'>
+                      <FontAwesomeIcon
+                        icon={faArrowLeft}
+                        className='backIcon'
+                      />
+                  </section>
+              </section>
             </header>
           <main>
               <article>
@@ -60,9 +65,6 @@ const FullBlog = () => {
                   <img src={isBlogPhotoUploaded === true ? URL.createObjectURL(blogPhoto) : uploadingImage} alt="blogPhoto" />
               </aside>
           </main>
-              <footer>
-                  {moment(blog[0]?.date).format("DD-MM-YYYY, HH:mm")}
-              </footer>
           </>
       )}
     </section>

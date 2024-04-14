@@ -42,19 +42,19 @@ const FullBlog = () => {
       ) : (
         <>
             <header>
-              <section className='header-top'>
-                <p> {moment(blog[0]?.date).format("DD-MM-YYYY, HH:mm")} </p>
+              <section className='header-left'>
+                <h1> {blog[0]?.name} </h1>
               </section>
-              <section className='header-bottom'>
-                  <section className='blogNameContainer'>
-                      <h1> {blog[0]?.name} </h1>
-                  </section>
-                  <section className='iconContainer'>
-                      <FontAwesomeIcon
-                        icon={faArrowLeft}
-                        className='backIcon'
-                      />
-                  </section>
+              <section className='header-right'>
+                <section className='header-right-top'>
+                  <p> {moment(blog[0]?.date).format("DD-MM-YYYY, HH:mm")} </p>
+                </section>
+                <section className='header-right-bottom'>
+                  <FontAwesomeIcon
+                    icon={faArrowLeft}
+                    className='backIcon'
+                  />
+                </section>
               </section>
             </header>
           <main>

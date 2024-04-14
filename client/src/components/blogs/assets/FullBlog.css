@@ -15,10 +15,11 @@
 
 .fullBlog header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
+    height: 180px;
     width: 100%;
 
     font-size: 2rem;
@@ -26,42 +27,60 @@
     box-shadow: 0px 2px 12px 0px var(--clr-box-shadow)
 }
 
-.fullBlog header .header-top {
-    width: 100%;
-
-    text-align: right;
+.fullBlog header .header-left {
+    height: max-content;
+    width: 70%;
 }
 
-.fullBlog header .header-top p {
-    font-size: 1rem;
-
-    padding-right: 2.5em;
+.fullBlog header .header-left h1 {
+    padding-left: 1em;
 }
 
-.fullBlog header .header-bottom {
+.fullBlog header .header-right {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    height: max-content;
+    width: 30%;
+}
+
+.fullBlog header .header-right .header-right-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    height: 90px;
     width: 100%;
-}
-
-.fullBlog header .header-bottom .blogNameContainer {
-    width: 90%;
-
-    padding-left: 1.5em;
-}
-
-.fullBlog header .header-bottom .iconContainer {
-    width: 10%;
-    
-    padding-right: 2.5em;
 
     text-align: right;
 }
 
-.fullBlog header .header-bottom .iconContainer .backIcon:hover {
+.fullBlog header .header-right .header-right-top p {
+    font-size: .75em;
+    padding-right: 1em;
+}
+
+.fullBlog header .header-right .header-right-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    height: 90px;
+    width: 100%;
+
+    text-align: right;
+}
+
+.fullBlog header .header-right .header-right-bottom .backIcon {
+    font-size: .75em;
+    padding-right: 2em;
+}
+
+.fullBlog header .header-right .header-right-bottom .backIcon:hover {
     cursor: pointer;
 }
 

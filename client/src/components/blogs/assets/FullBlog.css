@@ -42,6 +42,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: .75em;
 
     height: max-content;
     width: 30%;
@@ -50,7 +51,7 @@
 .fullBlog header .header-right .header-right-top {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
 
     height: 90px;
@@ -60,14 +61,16 @@
 }
 
 .fullBlog header .header-right .header-right-top p {
-    font-size: .75em;
+    font-size: .55em;
+
+    margin: 0;
     padding-right: 1em;
 }
 
 .fullBlog header .header-right .header-right-bottom {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-end;
 
     height: 90px;

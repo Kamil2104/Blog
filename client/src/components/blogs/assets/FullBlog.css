@@ -20,7 +20,10 @@
     justify-content: center;
     align-items: center;
 
-    height: 180px;
+    min-height: 150px;
+    height: fit-content;
+    max-height: 240px;
+
     width: 100%;
 
     font-size: 2rem;
@@ -29,11 +32,13 @@
 }
 
 .fullBlog header .header-left {
-    height: max-content;
     width: 70%;
+
+    padding-right: 1.25em;
 }
 
 .fullBlog header .header-left h1 {
+    font-size: 1.75rem;
     padding-left: 1em;
 }
 
@@ -54,14 +59,13 @@
     justify-content: flex-end;
     align-items: flex-end;
 
-    height: 90px;
     width: 100%;
 
     text-align: right;
 }
 
 .fullBlog header .header-right .header-right-top p {
-    font-size: .55em;
+    font-size: .7em;
 
     margin: 0;
     padding-right: 1em;
@@ -73,14 +77,13 @@
     justify-content: flex-start;
     align-items: flex-end;
 
-    height: 90px;
     width: 100%;
 
     text-align: right;
 }
 
 .fullBlog header .header-right .header-right-bottom .backIcon {
-    font-size: .75em;
+    font-size: .85em;
     padding-right: 2em;
 }
 
@@ -131,4 +134,65 @@
     
     min-width: 25%;
     max-width: 75%;
+}
+
+@media screen and (max-width: 750px) {
+    .fullBlog header .header-left h1 {
+        font-size: 1.25rem;
+    }
+    
+    .fullBlog header .header-right .header-right-top p {
+        font-size: .5em;
+    }
+
+    .fullBlog header .header-right .header-right-bottom .backIcon {
+        font-size: .65em;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .fullBlog header {
+        min-height: 125px;
+    }
+
+    .fullBlog header .header-left h1 {
+        font-size: 1rem;
+    }
+    
+    .fullBlog header .header-right .header-right-top p {
+        font-size: .35em;
+    }
+
+    .fullBlog header .header-right .header-right-bottom .backIcon {
+        font-size: .55em;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .fullBlog header {
+        min-height: 100px;
+    }
+
+    .fullBlog header .header-left h1 {
+        font-size: .8rem;
+    }
+    
+    .fullBlog header .header-right .header-right-top p {
+        font-size: .25em;
+    }
+
+    .fullBlog header .header-right .header-right-bottom .backIcon {
+        font-size: .4em;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .fullBlog header .header-right .header-right-bottom {
+        align-items: center;
+    }
+
+    .fullBlog header .header-right .header-right-bottom .backIcon {
+        padding-left: 2em;
+        padding-right: 0em;
+    }
 }

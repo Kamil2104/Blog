@@ -111,7 +111,6 @@
     width: 100%;
 
     font-size: 1.5rem;
-    word-break: break-all;
 }
 
 .fullBlog main article p {
@@ -129,8 +128,8 @@
 }
 
 .fullBlog main aside img {
-    min-height: 200px;
-    max-height: 400px;
+    min-height: 50px;
+    max-height: 500px;
     
     min-width: 25%;
     max-width: 75%;
@@ -147,6 +146,14 @@
 
     .fullBlog header .header-right .header-right-bottom .backIcon {
         font-size: .65em;
+    }
+
+    .fullBlog main {
+        gap: 3em;
+    }
+
+    .fullBlog main article {
+        font-size: 1.15rem;
     }
 }
 
@@ -166,6 +173,14 @@
     .fullBlog header .header-right .header-right-bottom .backIcon {
         font-size: .55em;
     }
+
+    .fullBlog main {
+        gap: 2em;
+    }
+
+    .fullBlog main article {
+        font-size: .9rem;
+    }
 }
 
 @media screen and (max-width: 390px) {
@@ -183,6 +198,10 @@
 
     .fullBlog header .header-right .header-right-bottom .backIcon {
         font-size: .4em;
+    }
+
+    .fullBlog main article {
+        font-size: .7rem;
     }
 }
 

@@ -107,6 +107,8 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    
+    flex-wrap: wrap;
 
     width: 100%;
     font-size: 1.5rem;
@@ -115,7 +117,7 @@
 .fullBlog main article p {
     padding: 0em 2em;
 
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
 .fullBlog main aside {

@@ -22,3 +22,4 @@ app.use('/', router)
 
 router.post('/getNames', blogUploader.getBlogName)
 router.post('/getNamesDescriptionsAndDates', blogUploader.getBlogNameDescriptionAndDate)
+router.post('/getBlog', blogUploader.getBlog)

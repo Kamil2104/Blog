@@ -40,6 +40,8 @@
 .fullBlog header .header-left h1 {
     font-size: 1.75rem;
     padding-left: 1em;
+
+    color: var(--clr-home-h1-font);
 }
 
 .fullBlog header .header-right {
@@ -85,6 +87,8 @@
 .fullBlog header .header-right .header-right-bottom .backIcon {
     font-size: .85em;
     padding-right: 2em;
+
+    color: var(--clr-blogs-fullBlog-icon);
 }
 
 .fullBlog header .header-right .header-right-bottom .backIcon:hover {

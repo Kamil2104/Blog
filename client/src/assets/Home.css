@@ -12,8 +12,8 @@ html, body {
     --clr-home-h1-font: rgb(116, 156, 200); 
 
     --clr-blogs-bg: rgba(255, 255, 255); 
+
     --clr-header-bg: rgba(250, 250, 250); 
-    --clr-box-shadow: rgb(188, 188, 188); 
 
     --clr-blogs-navbar-icon: rgb(143, 179, 218); 
     --clr-blogs-navbar-hovered-option-border-bg: rgb(185, 200, 217); 
@@ -22,6 +22,10 @@ html, body {
 
     --clr-blogs-blogsFromDatabase-hoveredDatabaseBlog-border-bg: rgb(137, 176, 217); 
     --clr-blogs-blogsFromDatabase-hoveredShowMoreParagraph-font: rgb(137, 176, 217); 
+
+    --clr-blogs-fullBlog-icon: rgb(143, 179, 218);
+
+    --clr-box-shadow: rgb(188, 188, 188); 
 }
 
 .home {

@@ -33,6 +33,8 @@
     font-size: 1.1em;
     line-height: 1.5em;
 
+    border: .2em solid white;
+
     box-shadow: 0px 0px 6px 0px var(--clr-box-shadow);
 }
 
@@ -42,7 +44,8 @@
 
     text-align: center;
 
-    background-color: lightgray;
+    color: var(--clr-blogs-navbar-infoContainer-font);
+    background-color: var(--clr-blogs-navbar-infoContainer-bg);
 }
 
 .blogs nav .pinnedInformationsHeader p,
@@ -51,13 +54,6 @@
     
     padding: 0;
     margin: 0;
-}
-
-.blogs nav .navigateSeparator {
-    min-height: .2em;
-    min-width: 100%;   
-
-    background-color: gray;
 }
 
 .blogs nav .navigateToStart p,
@@ -102,29 +98,11 @@
 .blogs nav .navigateToDatabaseBlog:hover {
     cursor: pointer;
 
-    background-color: var(--clr-box-shadow);
-}
-
-.blogs nav .navigateToStart:hover::before,
-.blogs nav .navigateToPinnedBlog:hover::before,
-.blogs nav .navigateToDatabaseBlog > *:hover::before {
-    content: attr(data-tooltip);
-
+    border: .2em solid var(--clr-blogs-navbar-hovered-option-border-bg);
     
-    display: block;
-    position: absolute;
-    transform: translate(0, -40px);
-    
-    height: fit-content;
-    width: calc(100% - 3em);
+    box-shadow: none;
 
-    font-size: .75em;
-    text-align: center;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-
-    background-color: gray;
+    transition: border linear .5s, box-shadow linear .5s;
 }
 
 .blogs nav .navigateToStart,
@@ -134,7 +112,7 @@
 
 .blogs nav .navigateToStart .pinnedBlogIcon,
 .blogs nav .navigateToPinnedBlog .pinnedBlogIcon{
-    color: darkgray;
+    color: var(--clr-blogs-navbar-icon);
 }
 
 @media screen and (max-width: 1000px) {
@@ -159,7 +137,7 @@
         top: 0;
     }
 
-    .blogs nav > *:not(.navigateSeparator, .pinnedInformationsHeader, .databaseBlogsHeader) {
+    .blogs nav > *:not(.pinnedInformationsHeader, .databaseBlogsHeader) {
         min-width: 110px;
         height: 100%;
     }
@@ -177,25 +155,12 @@
         text-align: center;
     }
 
-    .blogs nav .navigateToStart:hover::before,
-    .blogs nav .navigateToPinnedBlog:hover::before,
-    .blogs nav .navigateToDatabaseBlog > *:hover::before {
-        content: none;
-    }
-
     .blogs nav .navigateToStart p,
     .blogs nav .navigateToPinnedBlog p,
     .blogs nav .navigateToDatabaseBlog p,
     .blogs nav .navigateToStart .pinnedBlogIcon,
     .blogs nav .navigateToPinnedBlog .pinnedBlogIcon {
         font-size: .7em;
-    }
-
-    .blogs nav .navigateSeparator {
-        height: 100%;
-        min-width: .3em;
-
-        margin: 0em 1em;
     }
 
     .blogs nav .pinnedInformationsHeader,

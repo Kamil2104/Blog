@@ -20,8 +20,16 @@
     height: fit-content;
     width: 100%;
 
+    border: .3em solid white;
+
     box-shadow: 0px 0px 20px 0px var(--clr-box-shadow);
     background-color: white;
+}
+
+.databaseBlog:hover {
+    border: .3em solid var(--clr-blogs-blogsFromDatabase-hoveredDatabaseBlog-border-bg);
+
+    transition: border linear .5s;
 }
 
 .databaseBlog header {
@@ -99,14 +107,18 @@
 }
 
 .databaseBlog main footer .showMoreContentParagraphContainer  {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2em;
+    
     height: fit-content;
     width: 50%;
-
-    text-align: right;
 }
 
 .databaseBlog main footer .showMoreContentParagraphContainer p {
-    padding: 0em 2em .15em 1em;
+    width: fit-content;
 
     font-size: 1em;
     text-decoration: underline;
@@ -114,6 +126,18 @@
 
 .databaseBlog main footer .showMoreContentParagraphContainer p:hover {
     cursor: pointer;
+
+    color: var(--clr-blogs-blogsFromDatabase-hoveredShowMoreParagraph-font);
+}
+
+@media screen and (max-width: 800px) {
+    .databaseBlog {
+        border: .2em solid white;
+    }
+    
+    .databaseBlog:hover {
+        border: .2em solid var(--clr-blogs-blogsFromDatabase-hoveredDatabaseBlog-border-bg);
+    }
 }
 
 @media screen and (max-width: 770px) {

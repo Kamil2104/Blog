@@ -8,12 +8,20 @@ html, body {
 }
 
 :root {
-    --clr-home-bg: rgb(235, 235, 235);
-    --clr-header-bg: rgba(250, 250, 250);
-    --clr-blogs-bg: rgba(255, 255, 255);
-    --clr-blogs-font: rgba(255, 255, 255, 0.14);
-    --clr-box-shadow: rgb(160, 160, 160);
-    --clr-font: rgb(0, 0, 0);
+    --clr-home-bg: rgb(235, 235, 235); 
+    --clr-home-h1-font: rgb(116, 156, 200); 
+
+    --clr-blogs-bg: rgba(255, 255, 255); 
+    --clr-header-bg: rgba(250, 250, 250); 
+    --clr-box-shadow: rgb(188, 188, 188); 
+
+    --clr-blogs-navbar-icon: rgb(143, 179, 218); 
+    --clr-blogs-navbar-hovered-option-border-bg: rgb(185, 200, 217); 
+    --clr-blogs-navbar-infoContainer-bg: rgb(198, 209, 220); 
+    --clr-blogs-navbar-infoContainer-font: rgb(0, 0, 0); 
+
+    --clr-blogs-blogsFromDatabase-hoveredDatabaseBlog-border-bg: rgb(137, 176, 217); 
+    --clr-blogs-blogsFromDatabase-hoveredShowMoreParagraph-font: rgb(137, 176, 217); 
 }
 
 .home {
@@ -26,4 +34,8 @@ html, body {
     align-items: center;
 
     background-color: var(--clr-home-bg);
+}
+
+.home h1 {
+    color: var(--clr-home-h1-font);
 }

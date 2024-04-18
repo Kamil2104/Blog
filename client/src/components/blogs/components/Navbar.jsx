@@ -26,9 +26,6 @@ const Navbar = ({ blogNames }) => {
                     className="pinnedBlogIcon"
                 />
             </section>
-            <section className="navigateSeparator">
-                {/* Separates main navbar options from options from database  */}
-            </section>
             <section className="databaseBlogsHeader">
                 <p> Recently <br /> uploaded </p>
             </section>

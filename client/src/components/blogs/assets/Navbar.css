@@ -181,7 +181,7 @@
 
 @media screen and (max-width: 500px) {
     .blogs nav > *:not(.pinnedInformationsHeader, .databaseBlogsHeader) {
-        height: calc(50px - .3em);
+        height: calc(50px - .1em);
     }
 
     .blogs nav .navigateToStart,
@@ -191,6 +191,19 @@
 
         min-width: 110px;
     }
+
+    .blogs nav .navigateToStart,
+    .blogs nav .navigateToPinnedBlog,
+    .blogs nav .navigateToDatabaseBlog {
+        border: .115em solid white;
+    }
+
+    .blogs nav .navigateToStart:hover,
+    .blogs nav .navigateToPinnedBlog:hover,
+    .blogs nav .navigateToDatabaseBlog:hover {
+        border: .115em solid var(--clr-blogs-navbar-hovered-option-border-bg);
+    }
+   
 
     .blogs nav .navigateToStart p,
     .blogs nav .navigateToPinnedBlog p {

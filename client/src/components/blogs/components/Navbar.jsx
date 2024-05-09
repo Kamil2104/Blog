@@ -1,7 +1,7 @@
 import { scrollToComponent } from "../functions/scrollToComponent"
 
-import { faHome, faMapPin } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHome, faMapPin } from "@fortawesome/free-solid-svg-icons"
 
 import PropTypes from "prop-types"
 

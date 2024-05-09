@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import Loader from '../Loader';
+
 import './assets/NotLoggedIn.css';
 
 const NotLoggedIn = () => {

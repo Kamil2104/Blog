@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom' 
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 import Loader from '../../loader/components/Loader'
@@ -12,7 +13,6 @@ import PropTypes from "prop-types"
 import moment from 'moment'
 
 import '../assets/FullBlog.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const FullBlog = () => {
   const navigate = useNavigate()

@@ -31,4 +31,5 @@ For client panel:
 
 
 Author: Niewiadomski Kamil
+
 Note: This project was created as a demonstration and may require additional enhancements for production use. Feel free to reach out if you have any questions!

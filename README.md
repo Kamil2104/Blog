@@ -14,18 +14,14 @@ Import there a database file
 
 For admin panel:
 - In first powershell: Navigate to the backend folder directory: cd path_to_project/admin/backend
-- Install dependencies for back-end: npm install mysql express cors multer
 - Run the server: npm start
 - In second powershell: Navigate to the project directory: cd path_to_project/admin
-- Install dependencies for front-end: npm install @fortawesome/fontawesome-free axios prop-types 
 - Run the application: npm run dev
 
 For client panel:
 - In first powershell: Navigate to the backend folder directory: cd path_to_project/client/backend
-- Install dependencies for back-end: npm install npm install mysql express cors
 - Run the server: npm start
 - In second powershell: Navigate to the project directory: cd path_to_project/client
-- Install dependencies for front-end: npm install @fortawesome/fontawesome-free axios prop-types moment 
 - Run the application: npm run dev
 
 
